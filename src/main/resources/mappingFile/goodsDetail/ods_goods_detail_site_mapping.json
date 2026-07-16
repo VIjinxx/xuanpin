@@ -1,0 +1,17 @@
+{
+  "siteId": "webLayoutData.headerData.region.regionInfo.siteId",
+  "regionId": "webLayoutData.headerData.region.regionInfo.regionId",
+  "regionName": "webLayoutData.headerData.region.regionInfo.regionName",
+  "regionShortNamelinkUrl": "webLayoutData.headerData.region.regionInfo.regionShortName",
+  "phoneCode": "webLayoutData.headerData.region.regionInfo.phoneCode",
+  "selectedLang": "webLayoutData.headerData.region.regionInfo.selectedLang",
+  "selectedCurrency": "webLayoutData.headerData.region.regionInfo.selectedCurrency",
+  "supportedLangList": "webLayoutData.headerData.region.regionInfo.supportedLangList",
+  "supportedCurrencyList": "webLayoutData.headerData.region.regionInfo.supportedCurrencyList[0]",
+  "regionImageUrl": "webLayoutData.headerData.region.regionInfo.imageUrl",
+  "userAgent": "userAgent",
+  "serverTime": "serverTime",
+  "timezone": "localInfo.timezone",
+  "fromUrl": "webLayoutData.commonData.query.refer_page_name",
+  "lang": "lang"
+}

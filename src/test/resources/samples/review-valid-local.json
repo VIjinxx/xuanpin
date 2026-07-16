@@ -1,0 +1,35 @@
+{
+  "review": {
+    "reviewData": {
+      "reviewInfoList": [
+        {
+          "reviewId": "codex-review-valid-001",
+          "goodsId": "codex-goods-001",
+          "skuId": "codex-sku-001",
+          "comment": "valid local review",
+          "score": 5,
+          "time": 1772519291,
+          "timeMs": 1772519291000,
+          "concatTimeLang": "just now",
+          "name": "codex-user"
+        }
+      ]
+    }
+  },
+  "webLayoutData": {
+    "headerData": {
+      "region": {
+        "regionInfo": {
+          "siteId": 100,
+          "selectedLang": "en"
+        }
+      }
+    }
+  },
+  "localInfo": {
+    "timezone": "Asia/Shanghai"
+  },
+  "userAgent": "codex-local-test",
+  "serverTime": "1772519291000",
+  "lang": "zh-Hans"
+}

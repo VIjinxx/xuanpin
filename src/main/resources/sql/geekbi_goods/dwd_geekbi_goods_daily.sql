@@ -1,0 +1,82 @@
+CREATE TABLE IF NOT EXISTS lingyun.dwd_geekbi_goods_daily
+(
+    `goodsId` BIGINT NOT NULL COMMENT '商品id',
+    `siteId` INT NOT NULL COMMENT '站点id，对应data.site.id',
+    `date` DATE NOT NULL COMMENT '每日统计日期，由history.createTime提取',
+
+    `regionId` BIGINT NULL COMMENT '外部数据源区域id',
+    `sourceRecordId` STRING NULL COMMENT '外部数据源商品记录id',
+    `mallId` STRING NULL COMMENT '店铺id',
+    `goodsName` STRING NULL COMMENT '商品名称',
+    `goodsNameCn` STRING NULL COMMENT '商品中文名称',
+    `goodsNameEn` STRING NULL COMMENT '商品英文名称',
+    `thumbnail` STRING NULL COMMENT '商品主图',
+    `thumbnailCn` STRING NULL COMMENT '商品中文主图',
+    `catIds` JSON NULL COMMENT '类目id列表',
+    `optId` BIGINT NULL COMMENT '前端类目id',
+    `catId` BIGINT NULL COMMENT '叶子类目id',
+    `catItems` JSON NULL COMMENT '类目层级信息',
+    `currency` STRING NULL COMMENT '站点货币',
+    `cents` INT NULL COMMENT '货币最小单位换算比例',
+    `exchangeRate` DECIMAL(18,6) NULL COMMENT '汇率',
+    `skuInfo` JSON NULL COMMENT 'SKU信息',
+    `status` INT NULL COMMENT '商品状态',
+    `hostingMode` INT NULL COMMENT '托管模式',
+    `onSaleTime` DATETIME NULL COMMENT '商品上架时间',
+    `goodsCreateTime` DATETIME NULL COMMENT '商品记录创建时间',
+    `goodsUpdateTime` DATETIME NULL COMMENT '商品记录更新时间',
+
+    `historyId` STRING NULL COMMENT '历史记录id',
+    `sold` BIGINT NULL COMMENT '累计销量',
+    `sales` DECIMAL(20,4) NULL COMMENT '累计销售额',
+    `minPrice` DECIMAL(20,4) NULL COMMENT '最低价格',
+    `maxPrice` DECIMAL(20,4) NULL COMMENT '最高价格',
+    `quantity` BIGINT NULL COMMENT '库存数量',
+    `goodsScore` DECIMAL(10,2) NULL COMMENT '商品评分',
+    `reviewNum` BIGINT NULL COMMENT '评论数量',
+    `daySold` BIGINT NULL COMMENT '日销量',
+    `weekSold` BIGINT NULL COMMENT '周销量',
+    `monthSold` BIGINT NULL COMMENT '月销量',
+    `daySales` DECIMAL(20,4) NULL COMMENT '日销售额',
+    `weekSales` DECIMAL(20,4) NULL COMMENT '周销售额',
+    `monthSales` DECIMAL(20,4) NULL COMMENT '月销售额',
+    `daySoldRate` DECIMAL(18,6) NULL COMMENT '日销量变化率',
+    `weekSoldRate` DECIMAL(18,6) NULL COMMENT '周销量变化率',
+    `monthSoldRate` DECIMAL(18,6) NULL COMMENT '月销量变化率',
+    `daySalesRate` DECIMAL(18,6) NULL COMMENT '日销售额变化率',
+    `weekSalesRate` DECIMAL(18,6) NULL COMMENT '周销售额变化率',
+    `monthSalesRate` DECIMAL(18,6) NULL COMMENT '月销售额变化率',
+    `dayClickNum` BIGINT NULL COMMENT '日点击量',
+    `weekClickNum` BIGINT NULL COMMENT '周点击量',
+    `monthClickNum` BIGINT NULL COMMENT '月点击量',
+    `dayExposureNum` BIGINT NULL COMMENT '日曝光量',
+    `weekExposureNum` BIGINT NULL COMMENT '周曝光量',
+    `monthExposureNum` BIGINT NULL COMMENT '月曝光量',
+    `dayClickRate` DECIMAL(18,6) NULL COMMENT '日点击率',
+    `weekClickRate` DECIMAL(18,6) NULL COMMENT '周点击率',
+    `monthClickRate` DECIMAL(18,6) NULL COMMENT '月点击率',
+    `dayClickGrowthRate` DECIMAL(18,6) NULL COMMENT '日点击增长率',
+    `weekClickGrowthRate` DECIMAL(18,6) NULL COMMENT '周点击增长率',
+    `monthClickGrowthRate` DECIMAL(18,6) NULL COMMENT '月点击增长率',
+    `dayExposureGrowthRate` DECIMAL(18,6) NULL COMMENT '日曝光增长率',
+    `weekExposureGrowthRate` DECIMAL(18,6) NULL COMMENT '周曝光增长率',
+    `monthExposureGrowthRate` DECIMAL(18,6) NULL COMMENT '月曝光增长率',
+    `historyCreateTime` DATETIME NULL COMMENT '历史统计时间',
+    `historyUpdateTime` DATETIME NULL COMMENT '历史记录更新时间'
+)
+UNIQUE KEY(`goodsId`, `siteId`, `date`)
+COMMENT '外部数据源商品历史每日明细表'
+PARTITION BY RANGE(`date`) (
+    FROM ("2026-05-01") TO ("2026-07-01") INTERVAL 1 DAY
+)
+DISTRIBUTED BY HASH(`goodsId`) BUCKETS 16
+PROPERTIES (
+    "replication_num" = "3",
+    "enable_unique_key_merge_on_write" = "true",
+    "dynamic_partition.enable" = "true",
+    "dynamic_partition.time_unit" = "DAY",
+    "dynamic_partition.start" = "-2147483648",
+    "dynamic_partition.end" = "3",
+    "dynamic_partition.prefix" = "p",
+    "dynamic_partition.buckets" = "16"
+);

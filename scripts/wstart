@@ -1,0 +1,822 @@
+#!/bin/bash
+
+set -euo pipefail
+
+BIN_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+APP_HOME="$(cd "${BIN_DIR}/.." && pwd)"
+PRIMARY_JAR_DIR="${APP_HOME}/jar"
+RESTART_WAIT_SECONDS="${RESTART_WAIT_SECONDS:-5}"
+YARN_STOP_WAIT_SECONDS="${YARN_STOP_WAIT_SECONDS:-30}"
+YARN_START_WAIT_SECONDS="${YARN_START_WAIT_SECONDS:-30}"
+
+if [ -t 1 ] && [ -z "${NO_COLOR:-}" ]; then
+    COLOR_GREEN=$'\033[32m'
+    COLOR_YELLOW=$'\033[33m'
+    COLOR_RED=$'\033[31m'
+    COLOR_RESET=$'\033[0m'
+else
+    COLOR_GREEN=""
+    COLOR_YELLOW=""
+    COLOR_RED=""
+    COLOR_RESET=""
+fi
+
+FLINK_JOBS=(
+    "goods-detail-category"
+    "goods-detail-goods"
+    "goods-detail-mall"
+    "goods-detail-review"
+    "goods-detail-site"
+    "geekbi-goods"
+    "keyword-more-category"
+    "keyword-more-goods"
+    "store-detail-mall"
+)
+
+# Per-job Flink resources: job_name|taskmanager_memory|task_slots|parallelism
+FLINK_JOB_RESOURCES=(
+    "goods-detail-category|2048m|2|4"
+    "goods-detail-goods|4096m|4|8"
+    "goods-detail-mall|3072m|3|6"
+    "goods-detail-review|3072m|3|6"
+    "goods-detail-site|2048m|2|4"
+    "geekbi-goods|4096m|4|8"
+    "keyword-more-category|2048m|2|4"
+    "keyword-more-goods|3072m|3|6"
+    "store-detail-mall|3072m|3|6"
+)
+
+STARTED_TASKS=()
+RESTARTED_TASKS=()
+STOPPED_BEFORE_START_TASKS=()
+UNSTARTED_TASKS=()
+YARN_STARTED_TASKS=()
+YARN_UNSTARTED_TASKS=()
+
+log_info() {
+    printf '[INFO] %s\n' "$*"
+}
+
+log_warn() {
+    printf '[WARN] %s\n' "$*" >&2
+}
+
+log_error() {
+    printf '[ERROR] %s\n' "$*" >&2
+}
+
+usage() {
+    cat <<'EOF'
+Usage:
+  ./wstart list
+  ./wstart status
+  ./wstart [-jar <jar-file>] <task-name|all> [job-args...]
+
+Examples:
+  ./wstart list
+  ./wstart status
+  ./wstart store-detail-mall
+  ./wstart -jar lingfeng_xuanpin_flink_task-1.0-SNAPSHOT-all.jar store-detail-mall
+  ./wstart all
+
+Environment overrides:
+  APP_JAR                 Absolute or relative jar path
+  APP_JAR_NAME            Jar file name under ../jar
+  APP_JAR_DIR             Jar directory override
+  FLINK_BIN               Flink executable, default: flink
+  FLINK_TARGET            Flink deployment target, default: yarn-per-job
+  FLINK_APP_NAME          Explicit YARN application name for single-task start
+  FLINK_APP_NAME_PREFIX   Prefix for derived app names, default: lingfeng-
+  FLINK_JOBMANAGER_MEMORY Default: 1024m
+  FLINK_TASKMANAGER_MEMORY Override per-job taskmanager memory
+  FLINK_TASK_SLOTS        Override per-job task slots
+  FLINK_PARALLELISM       Override per-job parallelism
+  FLINK_DETACHED          Default: true
+  FLINK_LOG4J_CONFIG      Default: file:/opt/module/flink/conf/log4j.properties
+  FLINK_EXTRA_OPTS        Extra flink run options, appended before -p/-c
+  YARN_BIN                Yarn executable, default: yarn
+  YARN_APP_STATES         Query states for active applications, default: RUNNING,ACCEPTED,SUBMITTED
+  RESTART_WAIT_SECONDS    Seconds to wait between stop and restart, default: 5
+  YARN_START_WAIT_SECONDS Seconds to wait for YARN app to appear, default: 30
+  YARN_STOP_WAIT_SECONDS  Seconds to wait for YARN app to disappear, default: 30
+  NO_COLOR                Disable colored status output when set
+EOF
+}
+
+list_jobs() {
+    printf '%s\n' "${FLINK_JOBS[@]}"
+}
+
+contains_job() {
+    local expected="$1"
+    local job=""
+
+    for job in "${FLINK_JOBS[@]}"; do
+        if [ "${job}" = "${expected}" ]; then
+            return 0
+        fi
+    done
+
+    return 1
+}
+
+is_positive_integer() {
+    case "${1:-}" in
+        ''|*[!0-9]*) return 1 ;;
+        *) [ "$1" -gt 0 ] ;;
+    esac
+}
+
+resolve_job_resources() {
+    local expected="$1"
+    local resource=""
+    local job_name=""
+    local taskmanager_memory=""
+    local task_slots=""
+    local parallelism=""
+
+    for resource in "${FLINK_JOB_RESOURCES[@]}"; do
+        IFS='|' read -r job_name taskmanager_memory task_slots parallelism <<< "${resource}"
+        if [ "${job_name}" = "${expected}" ]; then
+            printf '%s|%s|%s\n' "${taskmanager_memory}" "${task_slots}" "${parallelism}"
+            return 0
+        fi
+    done
+
+    return 1
+}
+
+validate_job_resources() {
+    local resource=""
+    local candidate_resource=""
+    local job_name=""
+    local taskmanager_memory=""
+    local task_slots=""
+    local parallelism=""
+    local extra_field=""
+    local candidate_job_name=""
+    local duplicate_count=0
+    local job=""
+
+    for resource in "${FLINK_JOB_RESOURCES[@]}"; do
+        IFS='|' read -r job_name taskmanager_memory task_slots parallelism extra_field <<< "${resource}"
+
+        if [ -z "${job_name}" ] || [ -z "${taskmanager_memory}" ] || [ -z "${task_slots}" ] || [ -z "${parallelism}" ] || [ -n "${extra_field}" ]; then
+            log_error "Flink 资源配置格式错误: ${resource}"
+            return 1
+        fi
+
+        if ! contains_job "${job_name}"; then
+            log_error "Flink 资源配置中存在未知任务: ${job_name}"
+            return 1
+        fi
+
+        if ! is_positive_integer "${task_slots}"; then
+            log_error "任务 ${job_name} 的 task slots 必须是正整数: ${task_slots}"
+            return 1
+        fi
+
+        if ! is_positive_integer "${parallelism}"; then
+            log_error "任务 ${job_name} 的 parallelism 必须是正整数: ${parallelism}"
+            return 1
+        fi
+
+        duplicate_count=0
+        for candidate_resource in "${FLINK_JOB_RESOURCES[@]}"; do
+            IFS='|' read -r candidate_job_name _ <<< "${candidate_resource}"
+            if [ "${candidate_job_name}" = "${job_name}" ]; then
+                duplicate_count=$((duplicate_count + 1))
+            fi
+        done
+
+        if [ "${duplicate_count}" -gt 1 ]; then
+            log_error "任务 ${job_name} 存在重复的 Flink 资源配置"
+            return 1
+        fi
+    done
+
+    for job in "${FLINK_JOBS[@]}"; do
+        if ! resolve_job_resources "${job}" >/dev/null; then
+            log_error "任务 ${job} 缺少 Flink 资源配置"
+            return 1
+        fi
+    done
+}
+
+resolve_main_class() {
+    case "$1" in
+        goods-detail-category) echo "com.lingyun.business.goodsDetail.category.job.FlinkCategoryJob" ;;
+        goods-detail-goods) echo "com.lingyun.business.goodsDetail.goods.job.FlinkGoodsJob" ;;
+        goods-detail-mall) echo "com.lingyun.business.goodsDetail.mall.job.FlinkMallJob" ;;
+        goods-detail-review) echo "com.lingyun.business.goodsDetail.review.job.FlinkReviewJob" ;;
+        goods-detail-site) echo "com.lingyun.business.goodsDetail.site.job.FlinkSiteJob" ;;
+        geekbi-goods) echo "com.lingyun.business.geekbiGoods.job.FlinkGeekbiGoodsJob" ;;
+        keyword-more-category) echo "com.lingyun.business.keywordSearch.more.category.job.FlinkKeyMoreCategoryJob" ;;
+        keyword-more-goods) echo "com.lingyun.business.keywordSearch.more.goods.job.FlinkKeyMoreGoodsJob" ;;
+        store-detail-mall) echo "com.lingyun.business.storeDetail.mall.job.FlinkMallJob" ;;
+        *) return 1 ;;
+    esac
+}
+
+resolve_application_name() {
+    local job_name="$1"
+
+    if [ -n "${FLINK_APP_NAME:-}" ] && [ "${job_name}" != "all" ]; then
+        echo "${FLINK_APP_NAME}"
+        return 0
+    fi
+
+    echo "${FLINK_APP_NAME_PREFIX:-lingfeng-}${job_name}"
+}
+
+resolve_jar_path() {
+    local jar_spec="$1"
+    local configured_dir="${APP_JAR_DIR:-${PRIMARY_JAR_DIR}}"
+    local jar_path=""
+
+    if [ -f "${jar_spec}" ]; then
+        echo "${jar_spec}"
+        return 0
+    fi
+
+    case "${jar_spec}" in
+        /*)
+            jar_path="${jar_spec}"
+            ;;
+        */*)
+            jar_path="${APP_HOME}/${jar_spec}"
+            ;;
+        *)
+            jar_path="${configured_dir}/${jar_spec}"
+            ;;
+    esac
+
+    if [ -f "${jar_path}" ]; then
+        echo "${jar_path}"
+        return 0
+    fi
+
+    echo "Jar not found: ${jar_spec}" >&2
+    return 1
+}
+
+find_app_jar() {
+    local configured_dir="${APP_JAR_DIR:-${PRIMARY_JAR_DIR}}"
+    local requested_jar="${START_JAR_SPEC:-${APP_JAR:-${APP_JAR_NAME:-}}}"
+    local -a jar_files=()
+    local jar_file=""
+
+    if [ -n "${requested_jar}" ]; then
+        resolve_jar_path "${requested_jar}"
+        return 0
+    fi
+
+    if [ ! -d "${configured_dir}" ]; then
+        echo "Jar directory not found: ${configured_dir}. Use -jar to point at a packaged jar explicitly." >&2
+        return 1
+    fi
+
+    while IFS= read -r jar_file; do
+        jar_files+=("${jar_file}")
+    done < <(find "${configured_dir}" -maxdepth 1 -type f -name 'lingfeng_xuanpin*.jar' ! -name 'original-*.jar' | sort)
+
+    if [ "${#jar_files[@]}" -eq 0 ]; then
+        echo "Jar not found under ${configured_dir}. Expected ../jar/lingfeng_xuanpin*.jar or pass -jar <jar-file>." >&2
+        return 1
+    fi
+
+    if [ "${#jar_files[@]}" -gt 1 ]; then
+        echo "Multiple matching jars found under ${configured_dir}. Use -jar <jar-file> to choose one." >&2
+        printf ' - %s\n' "${jar_files[@]}" >&2
+        return 1
+    fi
+
+    echo "${jar_files[0]}"
+}
+
+is_truthy() {
+    case "${1:-}" in
+        1|true|TRUE|yes|YES|on|ON) return 0 ;;
+        *) return 1 ;;
+    esac
+}
+
+query_yarn_app_lines() {
+    local app_name="$1"
+    local output=""
+
+    if ! output="$(query_yarn_app_output)"; then
+        echo "Failed to query YARN applications with ${YARN_BIN:-yarn}." >&2
+        return 1
+    fi
+
+    awk -v app_name="${app_name}" '
+        $1 ~ /^application_/ && $2 == app_name { print }
+    ' <<< "${output}"
+}
+
+query_yarn_app_output() {
+    local yarn_bin="${YARN_BIN:-yarn}"
+    local app_states="${YARN_APP_STATES:-RUNNING,ACCEPTED,SUBMITTED}"
+    "${yarn_bin}" application -list -appStates "${app_states}" 2>/dev/null
+}
+
+yarn_output_has_app() {
+    local yarn_output="$1"
+    local app_name="$2"
+
+    awk -v app_name="${app_name}" '
+        $1 ~ /^application_/ && $2 == app_name { found = 1 }
+        END { exit(found ? 0 : 1) }
+    ' <<< "${yarn_output}"
+}
+
+print_title() {
+    printf '%s%s%s\n' "${COLOR_GREEN}" "$1" "${COLOR_RESET}"
+}
+
+print_started_item() {
+    printf '%s%s%s\n' "${COLOR_YELLOW}" "$1" "${COLOR_RESET}"
+}
+
+print_unstarted_item() {
+    printf '%s%s%s\n' "${COLOR_RED}" "$1" "${COLOR_RESET}"
+}
+
+print_status_summary() {
+    local yarn_output=""
+    local job_name=""
+    local app_name=""
+    local -a status_started_tasks=()
+    local -a status_unstarted_tasks=()
+
+    if [ -n "${FLINK_APP_NAME:-}" ]; then
+        echo "FLINK_APP_NAME is not supported by wstart status. Use FLINK_APP_NAME_PREFIX instead." >&2
+        return 1
+    fi
+
+    if ! yarn_output="$(query_yarn_app_output)"; then
+        echo "Failed to query YARN applications." >&2
+        return 1
+    fi
+
+    for job_name in "${FLINK_JOBS[@]}"; do
+        app_name="$(resolve_application_name "${job_name}")"
+        if yarn_output_has_app "${yarn_output}" "${app_name}"; then
+            status_started_tasks+=("${job_name}")
+        else
+            status_unstarted_tasks+=("${job_name}")
+        fi
+    done
+
+    print_title "已启动任务："
+    if [ "${#status_started_tasks[@]}" -eq 0 ]; then
+        print_started_item "无"
+    else
+        for job_name in "${status_started_tasks[@]}"; do
+            print_started_item "${job_name}"
+        done
+    fi
+
+    echo
+
+    print_title "未启动任务："
+    if [ "${#status_unstarted_tasks[@]}" -eq 0 ]; then
+        print_unstarted_item "无"
+    else
+        for job_name in "${status_unstarted_tasks[@]}"; do
+            print_unstarted_item "${job_name}"
+        done
+    fi
+}
+
+wait_for_app_stop() {
+    local app_name="$1"
+    local app_output=""
+    local deadline=$((SECONDS + YARN_STOP_WAIT_SECONDS))
+
+    while [ "${SECONDS}" -lt "${deadline}" ]; do
+        if ! app_output="$(query_yarn_app_lines "${app_name}")"; then
+            return 1
+        fi
+
+        if [ -z "${app_output}" ]; then
+            return 0
+        fi
+
+        sleep 1
+    done
+
+    return 1
+}
+
+wait_for_app_start() {
+    local app_name="$1"
+    local app_output=""
+    local deadline=$((SECONDS + YARN_START_WAIT_SECONDS))
+
+    while [ "${SECONDS}" -lt "${deadline}" ]; do
+        if ! app_output="$(query_yarn_app_lines "${app_name}")"; then
+            return 1
+        fi
+
+        if [ -n "${app_output}" ]; then
+            return 0
+        fi
+
+        sleep 1
+    done
+
+    return 1
+}
+
+stop_running_task_for_restart() {
+    local job_name="$1"
+    local app_name="$2"
+    local yarn_bin="${YARN_BIN:-yarn}"
+    local app_output=""
+    local -a app_lines=()
+    local app_id=""
+    local line=""
+
+    if ! app_output="$(query_yarn_app_lines "${app_name}")"; then
+        log_error "查询任务 ${job_name} 的 YARN 应用失败"
+        return 1
+    fi
+
+    if [ -z "${app_output}" ]; then
+        log_info "任务 ${job_name} 当前未启动，直接提交"
+        return 2
+    fi
+
+    mapfile -t app_lines <<< "${app_output}"
+
+    log_info "检测到任务 ${job_name} 已启动，先停止后再重启，appName=${app_name}"
+    printf '[INFO] 当前 YARN 应用: %s\n' "${app_lines[@]}"
+
+    for line in "${app_lines[@]}"; do
+        app_id="$(awk '{print $1}' <<< "${line}")"
+        log_info "停止 YARN 应用 ${app_id}"
+        if ! "${yarn_bin}" application -kill "${app_id}" >/dev/null; then
+            log_error "停止任务 ${job_name} 失败，applicationId=${app_id}"
+            return 1
+        fi
+    done
+
+    if ! wait_for_app_stop "${app_name}"; then
+        log_error "任务 ${job_name} 在 ${YARN_STOP_WAIT_SECONDS}s 内未完全停止"
+        return 1
+    fi
+
+    log_info "任务 ${job_name} 已停止，等待 ${RESTART_WAIT_SECONDS}s 后重新启动"
+    STOPPED_BEFORE_START_TASKS+=("${job_name}")
+    RESTARTED_TASKS+=("${job_name}")
+
+    if [ "${RESTART_WAIT_SECONDS}" -gt 0 ] 2>/dev/null; then
+        sleep "${RESTART_WAIT_SECONDS}"
+    fi
+
+    return 0
+}
+
+submit_flink_task() {
+    local job_name="$1"
+    local main_class="$2"
+    local app_jar="$3"
+    shift 3
+
+    local flink_bin="${FLINK_BIN:-flink}"
+    local flink_target="${FLINK_TARGET:-yarn-per-job}"
+    local jobmanager_memory="${FLINK_JOBMANAGER_MEMORY:-1024m}"
+    local resolved_resources=""
+    local configured_taskmanager_memory=""
+    local configured_task_slots=""
+    local configured_parallelism=""
+    local taskmanager_memory=""
+    local task_slots=""
+    local parallelism=""
+    local detached="${FLINK_DETACHED:-true}"
+    local log4j_config="${FLINK_LOG4J_CONFIG:-file:/opt/module/flink/conf/log4j.properties}"
+    local app_name=""
+    local -a flink_cmd=()
+    local -a extra_opts=()
+
+    if ! resolved_resources="$(resolve_job_resources "${job_name}")"; then
+        log_error "未配置任务 ${job_name} 的 Flink 资源"
+        return 1
+    fi
+
+    IFS='|' read -r configured_taskmanager_memory configured_task_slots configured_parallelism <<< "${resolved_resources}"
+    taskmanager_memory="${FLINK_TASKMANAGER_MEMORY:-${configured_taskmanager_memory}}"
+    task_slots="${FLINK_TASK_SLOTS:-${configured_task_slots}}"
+    parallelism="${FLINK_PARALLELISM:-${configured_parallelism}}"
+
+    app_name="$(resolve_application_name "${job_name}")"
+
+    flink_cmd=("${flink_bin}" run -t "${flink_target}")
+
+    if is_truthy "${detached}"; then
+        flink_cmd+=(-d)
+    fi
+
+    flink_cmd+=(
+        -D "yarn.application.name=${app_name}"
+        -D "pipeline.name=${app_name}"
+        -D "jobmanager.memory.process.size=${jobmanager_memory}"
+        -D "taskmanager.memory.process.size=${taskmanager_memory}"
+        -D "taskmanager.numberOfTaskSlots=${task_slots}"
+        -D "classloader.check-leaked-classloader=false"
+    )
+
+    if [ -n "${log4j_config}" ]; then
+        flink_cmd+=(-D "log4j.configurationFile=${log4j_config}")
+    fi
+
+    if [ -n "${FLINK_EXTRA_OPTS:-}" ]; then
+        # shellcheck disable=SC2206
+        extra_opts=( ${FLINK_EXTRA_OPTS} )
+        flink_cmd+=("${extra_opts[@]}")
+    fi
+
+    flink_cmd+=(-p "${parallelism}" -c "${main_class}" "${app_jar}")
+
+    if [ "$#" -gt 0 ]; then
+        flink_cmd+=("$@")
+    fi
+
+    log_info "开始启动任务 ${job_name}"
+    log_info "应用信息: appName=${app_name}, mainClass=${main_class}"
+    log_info "Jar: ${app_jar}"
+    log_info "提交配置: target=${flink_target}, detached=${detached}, log4j=${log4j_config:-未设置}"
+    log_info "资源配置: JM=${jobmanager_memory}, TM=${taskmanager_memory}, slots=${task_slots}, parallelism=${parallelism}"
+    if [ -n "${FLINK_EXTRA_OPTS:-}" ]; then
+        log_info "额外 Flink 参数: ${FLINK_EXTRA_OPTS}"
+    fi
+    if [ "$#" -gt 0 ]; then
+        log_info "任务参数: $*"
+    fi
+
+    if ! "${flink_cmd[@]}"; then
+        log_error "任务 ${job_name} 启动失败"
+        return 1
+    fi
+
+    if wait_for_app_start "${app_name}"; then
+        log_info "任务 ${job_name} 启动成功，appName=${app_name}"
+        return 0
+    fi
+
+    log_error "任务 ${job_name} 在 ${YARN_START_WAIT_SECONDS}s 内未出现在 YARN 列表中，appName=${app_name}"
+    return 1
+}
+
+start_single_task() {
+    local job_name="$1"
+    local app_jar="$2"
+    shift 2
+
+    local main_class=""
+    local app_name=""
+    local stop_status=0
+
+    if ! main_class="$(resolve_main_class "${job_name}")"; then
+        echo "[ERROR] 未知任务名称: ${job_name}" >&2
+        UNSTARTED_TASKS+=("${job_name}")
+        return 1
+    fi
+
+    app_name="$(resolve_application_name "${job_name}")"
+
+    if stop_running_task_for_restart "${job_name}" "${app_name}"; then
+        stop_status=0
+    else
+        stop_status=$?
+        if [ "${stop_status}" -ne 2 ]; then
+            UNSTARTED_TASKS+=("${job_name}")
+            return 1
+        fi
+    fi
+
+    if submit_flink_task "${job_name}" "${main_class}" "${app_jar}" "$@"; then
+        STARTED_TASKS+=("${job_name}")
+        return 0
+    fi
+
+    UNSTARTED_TASKS+=("${job_name}")
+    return 1
+}
+
+collect_all_start_status_from_yarn() {
+    local yarn_output=""
+    local job_name=""
+    local app_name=""
+
+    YARN_STARTED_TASKS=()
+    YARN_UNSTARTED_TASKS=()
+
+    if ! yarn_output="$(query_yarn_app_output)"; then
+        log_error "无法通过 YARN 查询任务最终状态"
+        return 1
+    fi
+
+    for job_name in "${FLINK_JOBS[@]}"; do
+        app_name="$(resolve_application_name "${job_name}")"
+        if yarn_output_has_app "${yarn_output}" "${app_name}"; then
+            YARN_STARTED_TASKS+=("${job_name}")
+        else
+            YARN_UNSTARTED_TASKS+=("${job_name}")
+        fi
+    done
+}
+
+print_task_block() {
+    local title="$1"
+    shift
+
+    echo "${title}"
+    if [ "$#" -eq 0 ]; then
+        echo "  - 无"
+        return 0
+    fi
+
+    printf '  - %s\n' "$@"
+}
+
+print_colored_task_block() {
+    local title="$1"
+    local title_color="$2"
+    local item_color="$3"
+    local item=""
+    shift 3
+
+    printf '%s%s%s\n' "${title_color}" "${title}" "${COLOR_RESET}"
+    if [ "$#" -eq 0 ]; then
+        echo "  - 无"
+        return 0
+    fi
+
+    for item in "$@"; do
+        printf '  - %s%s%s\n' "${item_color}" "${item}" "${COLOR_RESET}"
+    done
+}
+
+print_start_summary() {
+    echo
+    echo "启动汇总"
+    if [ "${START_TARGET}" = "all" ]; then
+        if [ "${#STARTED_TASKS[@]}" -gt 0 ]; then
+            print_colored_task_block "本次提交成功任务：" "${COLOR_YELLOW}" "${COLOR_GREEN}" "${STARTED_TASKS[@]}"
+        else
+            print_colored_task_block "本次提交成功任务：" "${COLOR_YELLOW}" "${COLOR_GREEN}"
+        fi
+
+        if [ "${#UNSTARTED_TASKS[@]}" -gt 0 ]; then
+            print_task_block "本次提交失败任务：" "${UNSTARTED_TASKS[@]}"
+        else
+            print_task_block "本次提交失败任务："
+        fi
+
+        if collect_all_start_status_from_yarn; then
+            if [ "${#YARN_STARTED_TASKS[@]}" -gt 0 ]; then
+                print_task_block "YARN 当前已启动任务：" "${YARN_STARTED_TASKS[@]}"
+            else
+                print_task_block "YARN 当前已启动任务："
+            fi
+
+            if [ "${#YARN_UNSTARTED_TASKS[@]}" -gt 0 ]; then
+                print_task_block "YARN 当前未启动任务：" "${YARN_UNSTARTED_TASKS[@]}"
+            else
+                print_task_block "YARN 当前未启动任务："
+            fi
+        else
+            log_warn "无法获取 YARN 最终状态，已跳过最终状态汇总"
+        fi
+        return 0
+    fi
+
+    if [ "${#STARTED_TASKS[@]}" -gt 0 ]; then
+        print_task_block "已启动任务：" "${STARTED_TASKS[@]}"
+    else
+        print_task_block "已启动任务："
+    fi
+
+    if [ "${#RESTARTED_TASKS[@]}" -gt 0 ]; then
+        print_task_block "已重启任务：" "${RESTARTED_TASKS[@]}"
+    else
+        print_task_block "已重启任务："
+    fi
+
+    if [ "${#STOPPED_BEFORE_START_TASKS[@]}" -gt 0 ]; then
+        print_task_block "启动前已停止任务：" "${STOPPED_BEFORE_START_TASKS[@]}"
+    else
+        print_task_block "启动前已停止任务："
+    fi
+
+    if [ "${#UNSTARTED_TASKS[@]}" -gt 0 ]; then
+        print_task_block "未启动任务：" "${UNSTARTED_TASKS[@]}"
+    else
+        print_task_block "未启动任务："
+    fi
+}
+
+if [ "$#" -eq 0 ]; then
+    usage
+    exit 1
+fi
+
+START_TARGET=""
+START_JAR_SPEC=""
+
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        list|-list|--list)
+            list_jobs
+            exit 0
+            ;;
+        status|-status|--status)
+            shift
+            if [ "$#" -gt 0 ]; then
+                echo "Unexpected extra arguments after status: $*" >&2
+                usage
+                exit 1
+            fi
+            print_status_summary
+            exit $?
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        -jar|--jar)
+            if [ "$#" -lt 2 ]; then
+                echo "Missing jar file after $1" >&2
+                usage
+                exit 1
+            fi
+            START_JAR_SPEC="$2"
+            shift 2
+            ;;
+        -start|--start)
+            echo "The -start option is no longer needed. Use './wstart <task-name|all>'." >&2
+            exit 1
+            ;;
+        *)
+            case "$1" in
+                -*)
+                    echo "Unknown option: $1" >&2
+                    usage
+                    exit 1
+                    ;;
+                *)
+                    START_TARGET="$1"
+                    shift
+                    break
+                    ;;
+            esac
+            ;;
+    esac
+done
+
+if [ -z "${START_TARGET}" ]; then
+    echo "Missing <task-name|all|status>." >&2
+    usage
+    exit 1
+fi
+
+if [ "${START_TARGET}" = "all" ] && [ -n "${FLINK_APP_NAME:-}" ]; then
+    echo "FLINK_APP_NAME is only supported for single-task starts." >&2
+    exit 1
+fi
+
+if [ "${START_TARGET}" = "all" ] && [ "$#" -gt 0 ]; then
+    echo "Task arguments are not supported when starting all tasks." >&2
+    exit 1
+fi
+
+if ! validate_job_resources; then
+    exit 1
+fi
+
+APP_JAR="$(find_app_jar)"
+OVERALL_STATUS=0
+
+if [ "${START_TARGET}" = "all" ]; then
+    for job_name in "${FLINK_JOBS[@]}"; do
+        if ! start_single_task "${job_name}" "${APP_JAR}"; then
+            OVERALL_STATUS=1
+        fi
+    done
+else
+    if ! contains_job "${START_TARGET}"; then
+        echo "Unknown task name: ${START_TARGET}" >&2
+        echo "Run './wstart list' to see supported task names." >&2
+        exit 1
+    fi
+
+    if ! start_single_task "${START_TARGET}" "${APP_JAR}" "$@"; then
+        OVERALL_STATUS=1
+    fi
+fi
+
+print_start_summary
+exit "${OVERALL_STATUS}"

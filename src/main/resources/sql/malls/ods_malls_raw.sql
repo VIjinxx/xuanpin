@@ -1,0 +1,67 @@
+DROP TABLE IF EXISTS lingyun.ods_malls_raw;
+
+CREATE TABLE lingyun.ods_malls_raw (
+    mallId BIGINT COMMENT '店铺id',
+    siteId INT COMMENT '店铺采集站点',
+    `date` DATE COMMENT '数据采集日期',
+    mallName STRING COMMENT '店铺名称',
+    mallLogo STRING COMMENT '店铺logo链接',
+    picUrl STRING COMMENT '组件配图 CDN 资源地址',
+    avatar STRING COMMENT '商家头像 CDN 在线地址',
+    appCode INT COMMENT '入驻渠道编码',
+    nickname STRING COMMENT '商家店铺昵称',
+    isDefaultAvatar BOOLEAN COMMENT '商家头像',
+    goodsNum INT COMMENT '商品数量',
+    goodsNumV2 STRING COMMENT '商品数量V2',
+    goodsNumUnit JSON COMMENT '商品数量单位',
+    goodsNumLowercaseUnit JSON COMMENT '商品数量单位(小写)',
+    mallStar DECIMAL(10,1) COMMENT '店铺评分',
+    mallStarStr STRING COMMENT '店铺评分(字符串格式)',
+    shortenMallStar STRING COMMENT '简写评分',
+    goodsSalesNum BIGINT COMMENT '商品已售数量',
+    goodsSalesNumUnit JSON COMMENT '商品已售数量单位',
+    goodsSalesBrief STRING COMMENT '商品已售简介',
+    followerNum BIGINT COMMENT '店铺关注者数量',
+    followerNumUnit JSON COMMENT '店铺关注者数量单位',
+    semiManaged BOOLEAN COMMENT '是否为半托管',
+    channelType STRING COMMENT '渠道类型',
+    searchUrl STRING COMMENT '搜索链接',
+    seoUrl STRING COMMENT 'seo链接',
+    mallJumpUrl STRING COMMENT '店铺跳转链接',
+    mallTags JSON COMMENT '店铺标签',
+    reviewNum INT COMMENT '评论数',
+    reviewNumStr STRING COMMENT '评价数量',
+    scoreNumInfoList JSON COMMENT '评价列表',
+    mallReviewLabelShow BOOLEAN COMMENT '是否展示评论标签',
+    mallReviewLinkUrl STRING COMMENT '店铺评论链接',
+    isExpire BOOLEAN COMMENT '是否过期',
+    userAgent STRING COMMENT 'UserAgent',
+    fromUrl STRING COMMENT '来源URL',
+    serverTime BIGINT COMMENT '服务器时间',
+    timezone STRING COMMENT '时区',
+    lang STRING COMMENT '语言',
+    selectedLang STRING COMMENT '选择语言',
+    source STRING COMMENT '来源',
+    shareInfo JSON COMMENT '分享信息',
+    topShopInfo JSON COMMENT '头部店铺信息',
+    semiManagedMallTags JSON COMMENT '半托管标签',
+    marketPriceType INT COMMENT '市场价类型',
+    goodsSimpleInfoList STRING COMMENT '单商品数据',
+    isAiReview BOOLEAN COMMENT '是否为 AI 虚拟评价',
+    optList JSON COMMENT '类目列表'
+)
+DUPLICATE KEY(mallId, siteId, `date`)
+COMMENT '店铺原始采集表'
+PARTITION BY RANGE (`date`) ()
+DISTRIBUTED BY HASH(mallId) BUCKETS 24
+PROPERTIES (
+    "replication_allocation" = "tag.location.default: 3",
+    "dynamic_partition.enable" = "true",
+    "dynamic_partition.time_unit" = "DAY",
+    "dynamic_partition.start" = "-2147483648",
+    "dynamic_partition.end" = "7",
+    "dynamic_partition.prefix" = "p",
+    "dynamic_partition.buckets" = "24",
+    "dynamic_partition.create_history_partition" = "false",
+    "compression" = "zstd"
+);

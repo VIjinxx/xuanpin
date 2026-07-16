@@ -1,0 +1,186 @@
+{
+  "reviewId": [
+    "review.reviewData.reviewInfoList[i].reviewId",
+    "review.reviewData.similarReview.reviewInfoList[i].reviewId",
+    "reviewStore.similarReview.reviewInfoList[i].reviewId",
+    "reviewStore.commentList[i].reviewId",
+    "reviewStore.pageReviewListMap.value[i].reviewId",
+    "reviewStore.initPageReviewListMap.value[i].reviewId"
+  ],
+  "siteId": "webLayoutData.headerData.region.regionInfo.siteId",
+  "goodsId": [
+    "review.reviewData.reviewInfoList[i].goodsId",
+    "review.reviewData.similarReview.reviewInfoList[i].goodsId",
+    "reviewStore.similarReview.reviewInfoList[i].goodsId",
+    "reviewStore.commentList[i].goodsId",
+    "reviewStore.pageReviewListMap.value[i].goodsId",
+    "reviewStore.initPageReviewListMap.value[i].goodsId"
+  ],
+  "skuId": [
+    "review.reviewData.reviewInfoList[i].skuId",
+    "review.reviewData.similarReview.reviewInfoList[i].skuId",
+    "reviewStore.similarReview.reviewInfoList[i].skuId",
+    "reviewStore.commentList[i].skuId",
+    "reviewStore.pageReviewListMap.value[i].skuId",
+    "reviewStore.initPageReviewListMap.value[i].skuId"
+  ],
+  "comment": [
+    "review.reviewData.reviewInfoList[i].comment",
+    "review.reviewData.similarReview.reviewInfoList[i].comment",
+    "reviewStore.similarReview.reviewInfoList[i].comment",
+    "reviewStore.commentList[i].comment",
+    "reviewStore.pageReviewListMap.value[i].comment",
+    "reviewStore.initPageReviewListMap.value[i].comment"
+  ],
+  "score": [
+    "review.reviewData.reviewInfoList[i].score",
+    "review.reviewData.similarReview.reviewInfoList[i].score",
+    "reviewStore.similarReview.reviewInfoList[i].score",
+    "reviewStore.commentList[i].score",
+    "reviewStore.pageReviewListMap.value[i].score",
+    "reviewStore.initPageReviewListMap.value[i].score"
+  ],
+  "specs": [
+    "review.reviewData.reviewInfoList[i].specs",
+    "review.reviewData.similarReview.reviewInfoList[i].specs",
+    "reviewStore.similarReview.reviewInfoList[i].specs",
+    "reviewStore.commentList[i].specs",
+    "reviewStore.pageReviewListMap.value[i].specs",
+    "reviewStore.initPageReviewListMap.value[i].specs"
+  ],
+  "time": [
+    "review.reviewData.reviewInfoList[i].time",
+    "review.reviewData.similarReview.reviewInfoList[i].time",
+    "reviewStore.similarReview.reviewInfoList[i].time",
+    "reviewStore.commentList[i].time",
+    "reviewStore.pageReviewListMap.value[i].time",
+    "reviewStore.initPageReviewListMap.value[i].time"
+  ],
+  "timeMs": [
+    "review.reviewData.reviewInfoList[i].timeMs",
+    "review.reviewData.similarReview.reviewInfoList[i].timeMs",
+    "reviewStore.similarReview.reviewInfoList[i].timeMs",
+    "reviewStore.commentList[i].timeMs",
+    "reviewStore.pageReviewListMap.value[i].timeMs",
+    "reviewStore.initPageReviewListMap.value[i].timeMs"
+  ],
+  "concatTimeLang": [
+    "review.reviewData.reviewInfoList[i].concatTimeLang",
+    "review.reviewData.similarReview.reviewInfoList[i].concatTimeLang",
+    "reviewStore.similarReview.reviewInfoList[i].concatTimeLang",
+    "reviewStore.commentList[i].concatTimeLang",
+    "reviewStore.pageReviewListMap.value[i].concatTimeLang",
+    "reviewStore.initPageReviewListMap.value[i].concatTimeLang"
+  ],
+  "concatRichText": [
+    "review.reviewData.reviewInfoList[i].concatRichText",
+    "review.reviewData.similarReview.reviewInfoList[i].concatRichText",
+    "reviewStore.similarReview.reviewInfoList[i].concatRichText",
+    "reviewStore.commentList[i].concatRichText",
+    "reviewStore.pageReviewListMap.value[i].concatRichText",
+    "reviewStore.initPageReviewListMap.value[i].concatRichText"
+  ],
+  "avatar": [
+    "review.reviewData.reviewInfoList[i].avatar",
+    "review.reviewData.similarReview.reviewInfoList[i].avatar",
+    "reviewStore.similarReview.reviewInfoList[i].avatar",
+    "reviewStore.commentList[i].avatar",
+    "reviewStore.pageReviewListMap.value[i].avatar",
+    "reviewStore.initPageReviewListMap.value[i].avatar"
+  ],
+  "name": [
+    "review.reviewData.reviewInfoList[i].name",
+    "review.reviewData.similarReview.reviewInfoList[i].name",
+    "reviewStore.similarReview.reviewInfoList[i].name",
+    "reviewStore.commentList[i].name",
+    "reviewStore.pageReviewListMap.value[i].name",
+    "reviewStore.initPageReviewListMap.value[i].name"
+  ],
+  "isOwnReview": [
+    "review.reviewData.reviewInfoList[i].isOwnReview",
+    "review.reviewData.similarReview.reviewInfoList[i].isOwnReview",
+    "reviewStore.similarReview.reviewInfoList[i].isOwnReview",
+    "reviewStore.commentList[i].isOwnReview",
+    "reviewStore.pageReviewListMap.value[i].isOwnReview",
+    "reviewStore.initPageReviewListMap.value[i].isOwnReview"
+  ],
+  "isSimilarReview": [
+    "review.reviewData.reviewInfoList[i].isSimilarReview",
+    "review.reviewData.similarReview.reviewInfoList[i].isSimilarReview",
+    "reviewStore.similarReview.reviewInfoList[i].isSimilarReview",
+    "reviewStore.commentList[i].isSimilarReview",
+    "reviewStore.pageReviewListMap.value[i].isSimilarReview",
+    "reviewStore.initPageReviewListMap.value[i].isSimilarReview"
+  ],
+  "profileLinkUrl": [
+    "review.reviewData.reviewInfoList[i].profileLinkUrl",
+    "review.reviewData.similarReview.reviewInfoList[i].profileLinkUrl",
+    "reviewStore.similarReview.reviewInfoList[i].profileLinkUrl",
+    "reviewStore.commentList[i].profileLinkUrl",
+    "reviewStore.pageReviewListMap.value[i].profileLinkUrl",
+    "reviewStore.initPageReviewListMap.value[i].profileLinkUrl"
+  ],
+  "pictures": [
+    "review.reviewData.reviewInfoList[i].pictures",
+    "review.reviewData.similarReview.reviewInfoList[i].pictures",
+    "reviewStore.similarReview.reviewInfoList[i].pictures",
+    "reviewStore.commentList[i].pictures",
+    "reviewStore.pageReviewListMap.value[i].pictures",
+    "reviewStore.initPageReviewListMap.value[i].pictures"
+  ],
+  "opList": [
+    "review.reviewData.reviewInfoList[i].opList",
+    "review.reviewData.similarReview.reviewInfoList[i].opList",
+    "reviewStore.similarReview.reviewInfoList[i].opList",
+    "reviewStore.commentList[i].opList",
+    "reviewStore.pageReviewListMap.value[i].opList",
+    "reviewStore.initPageReviewListMap.value[i].opList"
+  ],
+  "viewMoreList": [
+    "review.reviewData.reviewInfoList[i].viewMoreList",
+    "review.reviewData.similarReview.reviewInfoList[i].viewMoreList",
+    "reviewStore.similarReview.reviewInfoList[i].viewMoreList",
+    "reviewStore.commentList[i].viewMoreList",
+    "reviewStore.pageReviewListMap.value[i].viewMoreList",
+    "reviewStore.initPageReviewListMap.value[i].viewMoreList"
+  ],
+  "reviewLang": [
+    "review.reviewData.reviewInfoList[i].reviewLang",
+    "",
+    "",
+    "reviewStore.commentList[i].reviewLang",
+    "reviewStore.pageReviewListMap.value[i].reviewLang",
+    "reviewStore.initPageReviewListMap.value[i].reviewLang"
+  ],
+  "list": [
+    "review.reviewData.reviewInfoList[i].list",
+    "",
+    "",
+    "reviewStore.commentList[i].list",
+    "reviewStore.pageReviewListMap.value[i].list",
+    "reviewStore.initPageReviewListMap.value[i].list"
+  ],
+  "goodsSpecificReviewLevelInfo": [
+    "review.reviewData.reviewInfoList[i].goodsSpecificReviewLevelInfo",
+    "review.reviewData.similarReview.reviewInfoList[i].goodsSpecificReviewLevelInfo",
+    "reviewStore.similarReview.reviewInfoList[i].goodsSpecificReviewLevelInfo",
+    "reviewStore.commentList[i].goodsSpecificReviewLevelInfo",
+    "reviewStore.pageReviewListMap.value[i].goodsSpecificReviewLevelInfo",
+    "reviewStore.initPageReviewListMap.value[i].goodsSpecificReviewLevelInfo"
+  ],
+  "extendParams": [
+    "review.reviewData.reviewInfoList[i].extendParams",
+    "review.reviewData.similarReview.reviewInfoList[i].extendParams",
+    "reviewStore.similarReview.reviewInfoList[i].extendParams",
+    "reviewStore.commentList[i].extendParams",
+    "reviewStore.pageReviewListMap.value[i].extendParams",
+    "reviewStore.initPageReviewListMap.value[i].extendParams"
+  ],
+  "inBlacklist": "inBlacklist",
+  "userAgent": "userAgent",
+  "fromUrl": "moduleMap.shareModule.data.share.linkUrl",
+  "serverTime": "serverTime",
+  "timezone": "localInfo.timezone",
+  "lang": "lang",
+  "selectedLang": "webLayoutData.headerData.region.regionInfo.selectedLang"
+}

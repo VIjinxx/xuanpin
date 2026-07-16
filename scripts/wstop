@@ -1,0 +1,251 @@
+#!/bin/bash
+
+set -euo pipefail
+
+STOP_WAIT_SECONDS="${STOP_WAIT_SECONDS:-30}"
+
+FLINK_JOBS=(
+    "goods-detail-category"
+    "goods-detail-goods"
+    "goods-detail-mall"
+    "goods-detail-review"
+    "goods-detail-site"
+    "geekbi-goods"
+    "keyword-more-category"
+    "keyword-more-goods"
+    "store-detail-mall"
+)
+
+STOPPED_TASKS=()
+NOT_RUNNING_TASKS=()
+STOP_FAILED_TASKS=()
+
+usage() {
+    cat <<'EOF'
+Usage:
+  ./wstop list
+  ./wstop <task-name|all>
+
+Examples:
+  ./wstop list
+  ./wstop store-detail-mall
+  ./wstop all
+
+Environment overrides:
+  YARN_BIN               Yarn executable, default: yarn
+  YARN_APP_STATES        Query states for active applications, default: RUNNING,ACCEPTED,SUBMITTED
+  FLINK_APP_NAME         Explicit YARN application name for single-task stop
+  FLINK_APP_NAME_PREFIX  Prefix for derived app names, default: lingfeng-
+  STOP_WAIT_SECONDS      Seconds to wait for YARN app to disappear, default: 30
+EOF
+}
+
+list_jobs() {
+    printf '%s\n' "${FLINK_JOBS[@]}"
+}
+
+format_task_list() {
+    if [ "$#" -eq 0 ]; then
+        echo "无"
+        return 0
+    fi
+
+    local formatted="$1"
+    shift
+    local item=""
+
+    for item in "$@"; do
+        formatted="${formatted}, ${item}"
+    done
+
+    echo "${formatted}"
+}
+
+contains_job() {
+    local expected="$1"
+    local job=""
+
+    for job in "${FLINK_JOBS[@]}"; do
+        if [ "${job}" = "${expected}" ]; then
+            return 0
+        fi
+    done
+
+    return 1
+}
+
+resolve_application_name() {
+    local job_name="$1"
+
+    if [ -n "${FLINK_APP_NAME:-}" ] && [ "${job_name}" != "all" ]; then
+        echo "${FLINK_APP_NAME}"
+        return 0
+    fi
+
+    echo "${FLINK_APP_NAME_PREFIX:-lingfeng-}${job_name}"
+}
+
+query_yarn_app_lines() {
+    local app_name="$1"
+    local yarn_bin="${YARN_BIN:-yarn}"
+    local app_states="${YARN_APP_STATES:-RUNNING,ACCEPTED,SUBMITTED}"
+    local output=""
+
+    if ! output="$("${yarn_bin}" application -list -appStates "${app_states}" 2>/dev/null)"; then
+        echo "Failed to query YARN applications with ${yarn_bin}." >&2
+        return 1
+    fi
+
+    awk -v app_name="${app_name}" '
+        $1 ~ /^application_/ && $2 == app_name { print }
+    ' <<< "${output}"
+}
+
+wait_for_app_stop() {
+    local app_name="$1"
+    local app_output=""
+    local deadline=$((SECONDS + STOP_WAIT_SECONDS))
+
+    while [ "${SECONDS}" -lt "${deadline}" ]; do
+        if ! app_output="$(query_yarn_app_lines "${app_name}")"; then
+            return 1
+        fi
+
+        if [ -z "${app_output}" ]; then
+            return 0
+        fi
+
+        sleep 1
+    done
+
+    return 1
+}
+
+stop_single_task() {
+    local job_name="$1"
+    local app_name="$2"
+    local yarn_bin="${YARN_BIN:-yarn}"
+    local app_output=""
+    local -a app_lines=()
+    local app_id=""
+    local line=""
+
+    if ! app_output="$(query_yarn_app_lines "${app_name}")"; then
+        echo "[ERROR] 查询任务 ${job_name} 的 YARN 应用失败" >&2
+        STOP_FAILED_TASKS+=("${job_name}")
+        return 1
+    fi
+
+    if [ -z "${app_output}" ]; then
+        echo "[INFO] 任务 ${job_name} 当前未启动，无需停止"
+        NOT_RUNNING_TASKS+=("${job_name}")
+        return 0
+    fi
+
+    mapfile -t app_lines <<< "${app_output}"
+
+    echo "[INFO] 开始停止任务 ${job_name}"
+    printf ' - %s\n' "${app_lines[@]}"
+
+    for line in "${app_lines[@]}"; do
+        app_id="$(awk '{print $1}' <<< "${line}")"
+        if ! "${yarn_bin}" application -kill "${app_id}" >/dev/null; then
+            echo "[ERROR] 停止任务 ${job_name} 失败，applicationId=${app_id}" >&2
+            STOP_FAILED_TASKS+=("${job_name}")
+            return 1
+        fi
+    done
+
+    if ! wait_for_app_stop "${app_name}"; then
+        echo "[ERROR] 任务 ${job_name} 在 ${STOP_WAIT_SECONDS}s 内未完全停止" >&2
+        STOP_FAILED_TASKS+=("${job_name}")
+        return 1
+    fi
+
+    echo "[INFO] 任务 ${job_name} 停止成功"
+    STOPPED_TASKS+=("${job_name}")
+    return 0
+}
+
+print_stop_summary() {
+    echo "停止完成"
+    if [ "${#STOPPED_TASKS[@]}" -gt 0 ]; then
+        echo "已停止任务：$(format_task_list "${STOPPED_TASKS[@]}")"
+    else
+        echo "已停止任务：无"
+    fi
+
+    if [ "${#NOT_RUNNING_TASKS[@]}" -gt 0 ]; then
+        echo "未运行任务：$(format_task_list "${NOT_RUNNING_TASKS[@]}")"
+    else
+        echo "未运行任务：无"
+    fi
+
+    if [ "${#STOP_FAILED_TASKS[@]}" -gt 0 ]; then
+        echo "停止失败任务：$(format_task_list "${STOP_FAILED_TASKS[@]}")"
+    else
+        echo "停止失败任务：无"
+    fi
+}
+
+if [ "$#" -eq 0 ]; then
+    usage
+    exit 1
+fi
+
+STOP_TARGET=""
+
+case "$1" in
+    list|-list|--list)
+        list_jobs
+        exit 0
+        ;;
+    -h|--help)
+        usage
+        exit 0
+        ;;
+    *)
+        STOP_TARGET="$1"
+        shift
+        ;;
+esac
+
+if [ -z "${STOP_TARGET}" ]; then
+    echo "Missing task name or 'all'." >&2
+    usage
+    exit 1
+fi
+
+if [ "${STOP_TARGET}" = "all" ] && [ -n "${FLINK_APP_NAME:-}" ]; then
+    echo "FLINK_APP_NAME is only supported for single-task stops." >&2
+    exit 1
+fi
+
+if [ "$#" -gt 0 ]; then
+    echo "Unexpected extra arguments: $*" >&2
+    usage
+    exit 1
+fi
+
+OVERALL_STATUS=0
+
+if [ "${STOP_TARGET}" = "all" ]; then
+    for job_name in "${FLINK_JOBS[@]}"; do
+        if ! stop_single_task "${job_name}" "$(resolve_application_name "${job_name}")"; then
+            OVERALL_STATUS=1
+        fi
+    done
+else
+    if ! contains_job "${STOP_TARGET}"; then
+        echo "Unknown task name: ${STOP_TARGET}" >&2
+        echo "Run './wstop list' to see supported task names." >&2
+        exit 1
+    fi
+
+    if ! stop_single_task "${STOP_TARGET}" "$(resolve_application_name "${STOP_TARGET}")"; then
+        OVERALL_STATUS=1
+    fi
+fi
+
+print_stop_summary
+exit "${OVERALL_STATUS}"

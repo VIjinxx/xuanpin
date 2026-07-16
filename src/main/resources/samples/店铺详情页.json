@@ -1,0 +1,2583 @@
+{
+  "service": {},
+  "ctx": null,
+  "atomValue": {
+    "atoms": {
+      "GetActionsAtom": {},
+      "PortalAtom": {
+        "value": {
+          "portals": {},
+          "count": 0
+        }
+      }
+    }
+  },
+  "lang": "zh-Hans",
+  "headAndFootStaticConfigs": {},
+  "pageSn": 10040,
+  "needHeadData": true,
+  "needFootData": true,
+  "webLayoutData": {
+    "commonData": {
+      "pageSn": 10040,
+      "abTestConfig": {
+        "216316": {
+          "value": true
+        },
+        "218762": {
+          "value": true
+        },
+        "224648": {
+          "value": false
+        },
+        "232572": {
+          "value": true
+        },
+        "245724": {}
+      },
+      "expConfig": {
+        "cp214090": {},
+        "cp214091": {},
+        "cp214093": {},
+        "cp166196": {},
+        "cp166198": {},
+        "cp162938": {},
+        "cp204719": {},
+        "cp204720": {},
+        "cp202428": {},
+        "cp213544": {
+          "useVt": "1"
+        },
+        "cp222067": {
+          "useVt": ""
+        },
+        "cp222068": {
+          "useVt": ""
+        },
+        "cp210126": {
+          "value": 1
+        },
+        "cp220712": {
+          "value": 1
+        },
+        "cp220713": {
+          "value": 0
+        },
+        "globalStyle": {
+          "searchInputStyle": 1,
+          "goodsListCartStyle": 2
+        },
+        "cp66199": {
+          "value": true,
+          "supportRegionList": [
+            210,
+            69,
+            211,
+            174,
+            105,
+            101,
+            152,
+            16,
+            165,
+            209,
+            37,
+            12,
+            144,
+            141,
+            20,
+            13,
+            114,
+            192,
+            90,
+            167,
+            64,
+            108,
+            113,
+            96,
+            97,
+            135,
+            5,
+            130,
+            162,
+            53,
+            180,
+            32,
+            50,
+            181,
+            184,
+            126,
+            119,
+            160,
+            128,
+            42,
+            186,
+            163,
+            45,
+            29,
+            159,
+            75,
+            10,
+            14,
+            102,
+            212,
+            98,
+            122,
+            191,
+            54,
+            68,
+            151,
+            79,
+            52,
+            100,
+            91,
+            208
+          ],
+          "notSupportRegionList": []
+        },
+        "cp216316": {
+          "value": true
+        },
+        "cp218762": {
+          "value": true
+        },
+        "cp219816": {
+          "value": true
+        },
+        "cp225384": {}
+      },
+      "pageListId": "page_list_idugzvqc",
+      "staticConfigs": null,
+      "leoConfigs": {
+        "pageFresh": {
+          "refreshCartLimit": 5000,
+          "withTitan": true
+        },
+        "frontControlMap": {
+          "amplifyRate": 4,
+          "someApiCsr": true,
+          "footerClientRender": true,
+          "toolbarStopUntrustedClick": true,
+          "scIndexedDBCache": true,
+          "scHideInvalidGoods": false,
+          "openFbDialogShare": true
+        }
+      },
+      "localInfo": {
+        "region": "211",
+        "language": "zh-Hans",
+        "currency": "USD",
+        "timezone": "Asia/Shanghai"
+      },
+      "query": {
+        "mall_id": "280275145488",
+        "goods_id": "601101979766680",
+        "sticky_type": "3",
+        "_x_sessn_id": "cwm1w1u9up",
+        "refer_page_name": "goods",
+        "refer_page_id": "10032_1757415876736_kzng326npm",
+        "refer_page_sn": "10032"
+      },
+      "isRobot": false,
+      "dr": "udp"
+    },
+    "activityInfoData": {
+      "splitColor": "#FFFFFF",
+      "shadowColor": "#7A3E06",
+      "object": {
+        "benefits": [
+          {
+            "content": [
+              {
+                "type": "FREE_SHIPPING",
+                "icon": "https://aimg.kwcdn.com/upload_aimg/promo/04d06f47-bd83-4bbf-bfc3-23635d00b6fb.png.slim.png",
+                "svgPath": "M675 167.4c44.9 0 81.6 35 84.4 79.2l0.2 5.4 0 58.1 136.4 56.5c29.7 12.3 49.7 40.4 52 72.1l0.2 6 0 224.9c0 44.9-35 81.6-79.2 84.4l-5.4 0.2-7.1 0c-8.2 56-53.2 99.7-108.8 99.7-55.6 0-100.6-43.7-108.8-99.7l-213.6 0c-8.2 56-53.2 99.7-108.8 99.7-55.6 0-100.6-43.7-108.8-99.7l-6.9 0c-44.9 0-81.6-35-84.4-79.2l-0.2-5.4 0-77.1c0-17.7 14.3-32 32-32 16.4 0 29.9 12.4 31.8 28.2l0.2 3.8 0 77.1c0 10.3 7.6 18.9 17.5 20.4l3.1 0.2 494.8 0 0-438.2c0-10.3-7.6-18.9-17.6-20.4l-3-0.2-474.2 0c-10.3 0-18.9 7.6-20.4 17.5l-0.2 3.1 0 78.8 161.2 0c16.4 0 29.9 12.4 31.7 28.3l0.3 3.7c0 16.4-12.4 29.9-28.3 31.8l-3.7 0.2-193.2 0c-16.4 0-29.9-12.4-31.8-28.3l-0.2-3.7 0-110.8c0-44.9 35-81.6 79.2-84.4l5.4-0.2 474.2 0z m-315.1 586.8l-86.8 0c6.5 21.1 23.9 35.7 43.4 35.7 19.4 0 36.8-14.6 43.4-35.7z m431.2 0l-86.8 0c6.5 21.1 23.9 35.7 43.4 35.7 19.4 0 36.8-14.6 43.4-35.7z m-31.5-374.9l0 310.9 104 0c9.2 0 17-6 19.6-14.3l0.8-3.2 0.2-3.1 0-224.9c0-7.3-3.8-13.9-9.9-17.6l-2.8-1.4-111.9-46.4z m-563.4 68.4c17.7 0 32 14.3 32 32 0 17.7-14.3 32-32 32l-115.4 0c-17.7 0-32-14.3-32-32 0-17.7 14.3-32 32-32l115.4 0z",
+                "svgColor": "#ADFFA2",
+                "titleSuffixIcon": {
+                  "imgUrl": "https://aimg.kwcdn.com/upload_aimg/courier/e42aff00-2711-403b-927c-8255f75dbcee.png.slim.png",
+                  "imgSvgList": [
+                    {
+                      "svgPath": "M323.7 111.7c19.8-19.8 50.7-21.8 72.7-5.9l6.9 5.9 362.1 362.1c19.8 19.8 21.8 50.7 5.9 72.6l-5.9 7-362.1 362.1c-22 22-57.7 22-79.6 0-19.8-19.8-21.8-50.7-5.9-72.7l5.9-7 322.1-322.2-322.1-322.2c-19.8-19.8-21.8-50.7-5.9-72.7l5.9-7z",
+                      "svgColor": "#ADFFA2"
+                    }
+                  ]
+                },
+                "title": [
+                  {
+                    "type": "TEXT",
+                    "text": "平台包邮",
+                    "color": "#ADFFA2",
+                    "fontSize": 22,
+                    "fontWeight": 500,
+                    "bold": true
+                  },
+                  {
+                    "type": "TEXT",
+                    "text": "不包括从本地仓库发货的商品",
+                    "color": "#ADFFA2",
+                    "fontSize": 16,
+                    "fontWeight": 500,
+                    "bold": true
+                  }
+                ],
+                "clickColor": "#FED9B8",
+                "clickEvent": {
+                  "type": "TEXT_DIALOG",
+                  "dialog": {
+                    "title": [
+                      {
+                        "type": "TEXT",
+                        "text": "平台包邮",
+                        "color": "#000000",
+                        "fontSize": 20,
+                        "bold": true
+                      }
+                    ],
+                    "subtitle": [
+                      {
+                        "type": "TEXT",
+                        "text": "非本地仓库发货的商品可享免费标快物流",
+                        "color": "#000000",
+                        "fontSize": 13,
+                        "fontWeight": 400,
+                        "bold": false
+                      },
+                      {
+                        "type": "TEXT",
+                        "text": "因配送超时，您将获得$5.00抵用金（标准物流）。",
+                        "color": "#000000",
+                        "fontSize": 13,
+                        "bold": false
+                      },
+                      {
+                        "type": "TEXT",
+                        "text": "从本地仓库发货的卖家在满足特定门槛时提供免费配送服务。通常单个卖家的订单超过$30即可享受免费配送服务，但不同卖家的配送服务可能有所不同。",
+                        "color": "#000000",
+                        "fontSize": 13,
+                        "fontWeight": 400,
+                        "bold": false
+                      },
+                      {
+                        "type": "TEXT",
+                        "text": "Temu 有最低订单要求。适用的最低订单要求会在您提交订单前详细说明 （不包括从当地仓库发货的产品，这些产品没有最低订单价值）。",
+                        "color": "#000000",
+                        "fontSize": 13,
+                        "fontWeight": 400,
+                        "bold": false
+                      }
+                    ],
+                    "card": [],
+                    "button": {
+                      "type": "TEXT",
+                      "text": "确定"
+                    }
+                  },
+                  "extensionMap": {}
+                },
+                "bgColor": "#000000",
+                "trackInfo": {
+                  "pageElSn": 200370
+                },
+                "ignoreImmersion": false
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "DELIVERY_GUARANTEE",
+                "icon": "https://aimg.kwcdn.com/upload_aimg/promo/e46bd03a-19af-4d64-9ec9-5f7fdb828b72.png.slim.png",
+                "svgPath": "M659.6 178.4c49.6 0 89.9 40.2 89.9 89.9l0 51.2 142.5 54.9c34.7 13.4 57.6 46.7 57.5 83.8l0 210.7c0 46.3-35.1 84.5-80.1 89.4l0.1-4.5c0 60.5-50.4 109.1-112 109-59.9 0-109.2-45.9-111.9-104l-256.2 0 0 1c-3.2 57.7-52.3 103.1-111.9 103-59.9 0-109.2-45.9-111.8-104l-1.3 0c-49.6 0-89.9-40.2-89.9-89.9l0-400.6c0-49.6 40.2-89.9 89.9-89.9l495.2 0z m-334.4 580.4l-95.4 0c2.7 22.3 22.8 40 47.7 40 24.9 0 45-17.7 47.7-40z m392.3 0l-7.7 0c2.7 22.3 22.8 40 47.7 40 24.9 0 45-17.7 47.7-40l-87.7 0z m-57.9-516.4l-495.2 0c-14.3 0-25.9 11.6-25.9 25.9l0 400.6c0 14.3 11.6 25.9 25.9 25.9l521.1 0 0-426.5c0-13.2-9.9-24.1-22.6-25.7l-3.3-0.2z m89.9 145.6l0 306.8 110.1 0c13.2 0 24.1-9.9 25.7-22.6l0.2-3.3 0-210.7c0-10.7-6.6-20.3-16.6-24.1l-119.4-46.1z m-182.4-14.9c11.7 11.4 12.9 29.5 3.3 42.2l-2.6 3.1-164.5 169.8c-11.1 11.4-28.7 12.9-41.4 3.9l-3-2.5-105.8-95.7c-13.1-11.9-14.1-32.1-2.3-45.2 10.9-12.1 29-13.9 42.1-4.8l3.1 2.5 82.9 75 142.9-147.6c12.3-12.7 32.6-13 45.3-0.7z",
+                "svgColor": "#FFF7A7",
+                "title": [
+                  {
+                    "type": "TEXT",
+                    "text": "物流保障",
+                    "color": "#FFF7A7",
+                    "fontSize": 22,
+                    "bold": true
+                  },
+                  {
+                    "type": "TEXT",
+                    "text": "如有任何问题均可退款",
+                    "color": "#FFF7A7",
+                    "fontSize": 16,
+                    "bold": true
+                  }
+                ],
+                "clickColor": "#FED9B8",
+                "subtitle": [],
+                "clickEvent": {
+                  "type": "FLOATING_LAYER",
+                  "link": "/HomeCoupon.html?minversion=0.0.1&otter_type=v1&otter_ssr_api=/api/lego_bg_home_coupon/get_config/HomeCoupon&otter_minversion=3.1.0&otter_cache_enable=1&cache_expire_duration=86400000&rp=0&pageName=HomeCoupon",
+                  "floatingLayer": {
+                    "title": {
+                      "type": "TEXT",
+                      "text": "致力让您满意",
+                      "color": "#222222",
+                      "fontSize": 20,
+                      "fontWeight": 600,
+                      "bold": true
+                    },
+                    "policy": {
+                      "policyItems": [
+                        {
+                          "title": {
+                            "type": "TEXT",
+                            "text": "物流保障",
+                            "color": "#0A8800",
+                            "fontSize": 18,
+                            "bold": true
+                          },
+                          "headLineText": {
+                            "type": "TEXT",
+                            "text": "Temu与世界各地可靠的物流合作伙伴合作。我们保证您的包裹将安全准时送达。\n如果您购买的商品在运输过程中出现任何问题，例如损坏、丢失或延误，请您放心，我们会尽最大努力为您提供最佳解决方案解决问题。",
+                            "color": "#222222",
+                            "fontSize": 13,
+                            "bold": false
+                          },
+                          "contentList": [
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "送达超时赔付$5.00抵用金",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您的订单未在预计最晚送达日期或之前送达，作为补偿，我们将在该日期后的48小时内为您发放$5.00抵用金(标准物流)。该抵用金将发放到您的Temu抵用金余额中，可用于您的下笔订单。\n在特定情况下，包括但不限于自然灾害和其他不可预见的情况，您可能无法收到延迟交货的赔偿。",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              },
+                              "viewMoreText": [
+                                {
+                                  "type": "TEXT",
+                                  "text": "有关该政策的更多例外情况和详细信息，请参阅我们的政策页面",
+                                  "color": "#777777",
+                                  "fontSize": 13,
+                                  "fontWeight": 400,
+                                  "bold": false,
+                                  "url": "/late-delivery-compensation-policy.html",
+                                  "mark": false
+                                }
+                              ]
+                            },
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "商品损坏可退货",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您收到包裹后，发现某些物品在运输途中丢失或损坏，请放心，您可以轻松地申请这些物品的全额退款。 ",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              }
+                            },
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "轨迹15天无更新可退款",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您的包裹超过15天没有物流更新且未送达，您可以申请免费补发或退款，因为包裹可能在运输途中丢失。如果您在申请退款后收到包裹，您可以自行处置，无需退回。\n在特定情况下，包括但不限于自然灾害等不可抗力情况，您可能无法获得补偿或因未更新而要求退款。",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              },
+                              "viewMoreText": [
+                                {
+                                  "type": "TEXT",
+                                  "text": "有关该政策的更多例外情况和详细信息，请参阅我们的政策页面",
+                                  "color": "#777777",
+                                  "fontSize": 13,
+                                  "fontWeight": 400,
+                                  "bold": false,
+                                  "url": "/package-lost-compensation-policy.html",
+                                  "mark": false
+                                }
+                              ]
+                            },
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "30天未送达可退款",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您的包裹在发货后 30 天内未送达（对于通过卡车运送的包裹或重量为 80 公斤或以上的包裹，需要多 5 天），您可以申请免费重新发货或全额退款。如果包裹在退款后到达，您可以免费保留，无需退回。\n在特定情况下，包括但不限于自然灾害等不可抗力的情况，您可能无法申请免费重新发货或者因未送达而要求退款。",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              },
+                              "viewMoreText": [
+                                {
+                                  "type": "TEXT",
+                                  "text": "有关该政策的更多例外情况和详细信息，请参阅我们的政策页面",
+                                  "color": "#777777",
+                                  "fontSize": 13,
+                                  "fontWeight": 400,
+                                  "bold": false,
+                                  "url": "/no-delivery-compensation-policy.html",
+                                  "mark": false
+                                }
+                              ]
+                            }
+                          ],
+                          "key": "DELIVERY_GUARANTEE"
+                        },
+                        {
+                          "title": {
+                            "type": "TEXT",
+                            "text": "免费退货",
+                            "color": "#0A8800",
+                            "fontSize": 18,
+                            "bold": true
+                          },
+                          "additionalTitle": [
+                            {
+                              "type": "TEXT",
+                              "text": "每笔订单您享有一次免费退货服务，可免费退回一个或多个可退货商品！ 为了避免额外的运输费用并最大限度地减少多次退货对环境的影响，我们建议您选择一并退回所有希望退货的商品。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            },
+                            {
+                              "type": "TEXT",
+                              "text": "大多数商品的退货期限为购买之日起90天。所有符合条件的商品均可在退货期限内以原始状态退回，并获得全额退款。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            }
+                          ],
+                          "key": "FREE_RETURN"
+                        },
+                        {
+                          "title": {
+                            "type": "TEXT",
+                            "text": "降价补差",
+                            "color": "#0A8800",
+                            "fontSize": 18,
+                            "bold": true
+                          },
+                          "additionalTitle": [
+                            {
+                              "type": "TEXT",
+                              "text": "从Temu购买的商品符合我们的价格调整政策。如果所购买商品的售价在同一国家或地区付款后30天内下降，Temu将以订单支付的货币提供差价。在您收到商品之前申请价格调整不会影响您订单的发货。您可以在“我的订单”中选择相关订单，然后点击“降价退差价”按钮来申请价格调整退款。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            },
+                            {
+                              "type": "TEXT",
+                              "text": "促销商品或已不再供应的商品可能不适用于我们的降价补差政策。费用（包括但不限于运费）将不包含在任何降价补差计算中。Temu保留对降价补差政策的最终解释权，保留随时修改本政策条款的权利，以及自行决定是否拒绝任何降价补差的权利。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            }
+                          ],
+                          "key": "PRICE_ADJUSTMENT"
+                        }
+                      ]
+                    },
+                    "extensionMap": {
+                      "newExpireTimeDisplayStyle": false
+                    }
+                  },
+                  "extensionMap": {}
+                },
+                "bgColor": "#000000",
+                "trackInfo": {
+                  "pageElSn": 222894
+                },
+                "key": "DELIVERY_GUARANTEE",
+                "ignoreImmersion": false
+              },
+              {
+                "type": "FREE_RETURN",
+                "icon": "https://aimg.kwcdn.com/upload_aimg/promo/c7504ded-2c41-4fab-9802-1140887c717e.png.slim.png",
+                "svgPath": "M810.2 182.4c38.9 0 70.4 31.5 70.4 70.4l0 91.6c0 32.5-22 59.8-52 68l0 358.8c0 38.9-31.5 70.4-70.4 70.4l-492.4 0c-38.9 0-70.4-31.5-70.4-70.4l0-358.8c-29.9-8.1-52-35.5-52-68l0-91.6c0-38.9 31.5-70.4 70.4-70.4l596.4 0z m-43.3 243.5l-509.8 0 0 345.3c0 4.1 2.9 7.6 6.7 8.5l2 0.2 492.4 0c4.8 0 8.7-3.9 8.7-8.7l0-345.3z m-239 64.1c11.2 11 12.2 28.5 2.9 40.7l-2.6 2.9-37.8 38.5 120.4 0c17 0 30.8 13.8 30.8 30.8 0 15.8-11.9 28.9-27.2 30.7l-3.6 0.2-109.4 0 26.8 27.3c11 11.2 11.7 28.7 2.3 40.7l-2.6 2.9c-11.2 11-28.7 11.7-40.8 2.2l-2.9-2.6-83.9-85.3c-10.9-11.1-11.7-28.3-2.5-40.4l2.5-2.9 83.9-85.3c11.9-12.1 31.5-12.3 43.7-0.4z m282.3-245.9l-596.4 0c-4.8 0-8.7 3.9-8.7 8.7l0 91.6c0 4.8 3.9 8.7 8.7 8.7l596.4 0c4.8 0 8.7-3.9 8.7-8.7l0-91.6c0-4.8-3.9-8.7-8.7-8.7z",
+                "svgColor": "#FFF7A7",
+                "title": [
+                  {
+                    "type": "TEXT",
+                    "text": "免费退货",
+                    "color": "#FFF7A7",
+                    "fontSize": 22,
+                    "bold": true
+                  },
+                  {
+                    "type": "TEXT",
+                    "text": "长达90天*",
+                    "color": "#FFF7A7",
+                    "fontSize": 16,
+                    "bold": true
+                  }
+                ],
+                "clickColor": "#FED9B8",
+                "subtitle": [],
+                "clickEvent": {
+                  "type": "FLOATING_LAYER",
+                  "link": "/HomeCoupon.html?minversion=0.0.1&otter_type=v1&otter_ssr_api=/api/lego_bg_home_coupon/get_config/HomeCoupon&otter_minversion=3.1.0&otter_cache_enable=1&cache_expire_duration=86400000&rp=0&pageName=HomeCoupon",
+                  "floatingLayer": {
+                    "title": {
+                      "type": "TEXT",
+                      "text": "致力让您满意",
+                      "color": "#222222",
+                      "fontSize": 20,
+                      "fontWeight": 600,
+                      "bold": true
+                    },
+                    "policy": {
+                      "policyItems": [
+                        {
+                          "title": {
+                            "type": "TEXT",
+                            "text": "物流保障",
+                            "color": "#0A8800",
+                            "fontSize": 18,
+                            "bold": true
+                          },
+                          "headLineText": {
+                            "type": "TEXT",
+                            "text": "Temu与世界各地可靠的物流合作伙伴合作。我们保证您的包裹将安全准时送达。\n如果您购买的商品在运输过程中出现任何问题，例如损坏、丢失或延误，请您放心，我们会尽最大努力为您提供最佳解决方案解决问题。",
+                            "color": "#222222",
+                            "fontSize": 13,
+                            "bold": false
+                          },
+                          "contentList": [
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "送达超时赔付$5.00抵用金",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您的订单未在预计最晚送达日期或之前送达，作为补偿，我们将在该日期后的48小时内为您发放$5.00抵用金(标准物流)。该抵用金将发放到您的Temu抵用金余额中，可用于您的下笔订单。\n在特定情况下，包括但不限于自然灾害和其他不可预见的情况，您可能无法收到延迟交货的赔偿。",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              },
+                              "viewMoreText": [
+                                {
+                                  "type": "TEXT",
+                                  "text": "有关该政策的更多例外情况和详细信息，请参阅我们的政策页面",
+                                  "color": "#777777",
+                                  "fontSize": 13,
+                                  "fontWeight": 400,
+                                  "bold": false,
+                                  "url": "/late-delivery-compensation-policy.html",
+                                  "mark": false
+                                }
+                              ]
+                            },
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "商品损坏可退货",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您收到包裹后，发现某些物品在运输途中丢失或损坏，请放心，您可以轻松地申请这些物品的全额退款。 ",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              }
+                            },
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "轨迹15天无更新可退款",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您的包裹超过15天没有物流更新且未送达，您可以申请免费补发或退款，因为包裹可能在运输途中丢失。如果您在申请退款后收到包裹，您可以自行处置，无需退回。\n在特定情况下，包括但不限于自然灾害等不可抗力情况，您可能无法获得补偿或因未更新而要求退款。",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              },
+                              "viewMoreText": [
+                                {
+                                  "type": "TEXT",
+                                  "text": "有关该政策的更多例外情况和详细信息，请参阅我们的政策页面",
+                                  "color": "#777777",
+                                  "fontSize": 13,
+                                  "fontWeight": 400,
+                                  "bold": false,
+                                  "url": "/package-lost-compensation-policy.html",
+                                  "mark": false
+                                }
+                              ]
+                            },
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "30天未送达可退款",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您的包裹在发货后 30 天内未送达（对于通过卡车运送的包裹或重量为 80 公斤或以上的包裹，需要多 5 天），您可以申请免费重新发货或全额退款。如果包裹在退款后到达，您可以免费保留，无需退回。\n在特定情况下，包括但不限于自然灾害等不可抗力的情况，您可能无法申请免费重新发货或者因未送达而要求退款。",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              },
+                              "viewMoreText": [
+                                {
+                                  "type": "TEXT",
+                                  "text": "有关该政策的更多例外情况和详细信息，请参阅我们的政策页面",
+                                  "color": "#777777",
+                                  "fontSize": 13,
+                                  "fontWeight": 400,
+                                  "bold": false,
+                                  "url": "/no-delivery-compensation-policy.html",
+                                  "mark": false
+                                }
+                              ]
+                            }
+                          ],
+                          "key": "DELIVERY_GUARANTEE"
+                        },
+                        {
+                          "title": {
+                            "type": "TEXT",
+                            "text": "免费退货",
+                            "color": "#0A8800",
+                            "fontSize": 18,
+                            "bold": true
+                          },
+                          "additionalTitle": [
+                            {
+                              "type": "TEXT",
+                              "text": "每笔订单您享有一次免费退货服务，可免费退回一个或多个可退货商品！ 为了避免额外的运输费用并最大限度地减少多次退货对环境的影响，我们建议您选择一并退回所有希望退货的商品。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            },
+                            {
+                              "type": "TEXT",
+                              "text": "大多数商品的退货期限为购买之日起90天。所有符合条件的商品均可在退货期限内以原始状态退回，并获得全额退款。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            }
+                          ],
+                          "key": "FREE_RETURN"
+                        },
+                        {
+                          "title": {
+                            "type": "TEXT",
+                            "text": "降价补差",
+                            "color": "#0A8800",
+                            "fontSize": 18,
+                            "bold": true
+                          },
+                          "additionalTitle": [
+                            {
+                              "type": "TEXT",
+                              "text": "从Temu购买的商品符合我们的价格调整政策。如果所购买商品的售价在同一国家或地区付款后30天内下降，Temu将以订单支付的货币提供差价。在您收到商品之前申请价格调整不会影响您订单的发货。您可以在“我的订单”中选择相关订单，然后点击“降价退差价”按钮来申请价格调整退款。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            },
+                            {
+                              "type": "TEXT",
+                              "text": "促销商品或已不再供应的商品可能不适用于我们的降价补差政策。费用（包括但不限于运费）将不包含在任何降价补差计算中。Temu保留对降价补差政策的最终解释权，保留随时修改本政策条款的权利，以及自行决定是否拒绝任何降价补差的权利。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            }
+                          ],
+                          "key": "PRICE_ADJUSTMENT"
+                        }
+                      ]
+                    },
+                    "extensionMap": {
+                      "newExpireTimeDisplayStyle": false
+                    }
+                  },
+                  "extensionMap": {}
+                },
+                "bgColor": "#000000",
+                "trackInfo": {
+                  "pageElSn": 200369
+                },
+                "key": "FREE_RETURN",
+                "ignoreImmersion": false
+              },
+              {
+                "type": "PRICE_ADJUSTMENT",
+                "icon": "https://aimg.kwcdn.com/upload_aimg/promo/19f0e1b1-ba63-4428-a900-a7ca9df13604.png.slim.png",
+                "svgPath": "M616.2 823.7c16.9-4.4 34.1 5.7 38.4 22.5 4.4 16.9-5.7 34.1-22.5 38.5-32.6 8.6-66.2 12.7-99.8 12.4-17.4-0.2-31.4-14.4-31.2-31.9 0.2-17.4 14.4-31.4 31.8-31.1 28 0.3 56-3.2 83.3-10.4z m-287.8-25.6c9.1-14.9 28.5-19.6 43.2-10.4l18.2 10.2c19 9.9 38.6 17.8 58.8 23.7 16.8 4.9 26.3 22.3 21.4 39.1-4.9 16.8-22.3 26.3-39 21.5-30.3-8.8-59.5-21.4-87.3-37.8l-4.9-3c-14.9-9.1-19.6-28.5-10.4-43.3l0 0z m433.3-58.3c12.3-12.3 32.3-12.4 44.6-0.1 12.3 12.3 12.4 32.3 0.1 44.6-23.9 24-50.6 44.6-79.6 61.4-15 8.7-34.3 3.6-43.1-11.5-8.7-15-3.6-34.3 11.5-43 24.2-14.1 46.6-31.3 66.5-51.4l0 0z m-548.8-86.6c15.3-8.4 34.4-2.7 42.8 12.6 13.5 24.8 30.1 47.7 49.4 68.1 12 12.6 11.4 32.6-1.2 44.6-12.6 12-32.6 11.4-44.6-1.3-23.1-24.4-42.9-51.7-59-81.2-8.4-15.3-2.7-34.4 12.6-42.8z m330-371.2c16.2 0 29.4 13.2 29.4 29.4l0 32.5c10.1 1.8 21.5 5 34.3 9.6l3.4 1.5c15.8 7.9 22.2 27.1 14.2 42.9-8.1 16-27.1 23.1-43.7 16.2-10.1-4.1-18.2-6.3-24.5-6.2-9.9 0-18.4 2.3-25.3 7-6.8 4.7-10.4 10.5-10.3 17.3 0 6.1 3 11.7 8.9 16.9 4.4 3.8 8.5 6.5 12.2 8.1l13.3 5c5 1.8 11.4 4 19.1 6.6 23.9 8.3 42.4 18.7 55.6 31.2 14.7 13.8 22.1 33.3 22.1 58.8 0 26.6-7.4 48.7-22.1 66.3-10.7 13.2-29.2 24.1-55.3 32.9l-1.9 0.6 0 41.1c0 16.2-13.2 29.4-29.4 29.5-16.2 0-29.4-13.2-29.5-29.5l0-36.9c-15-1.8-29.9-5.5-44.9-11.2l-5.8-2.4-6.7-3.3c-17.6-9.4-25.1-30.1-18.4-48.2l2.6-5.6c9.2-16.1 29.6-21.7 45.7-12.7 19.7 11.2 35.2 16.8 46.6 16.9 10.9 0 20-3 27.5-8.9 7.4-5.9 11.2-13.2 11.1-21.8 0-6.8-2.9-12.7-8.7-17.6-4.3-3.6-8.2-6.1-11.7-7.5l-8.2-3-22.4-7.3c-23.7-7.3-42.1-16.5-54.9-27.4-16.4-14.1-24.6-34.2-24.6-60.5 0-16.8 3.6-32.5 10.8-47.6 7.1-15 16.9-27 29.4-36 8.9-6.6 19.8-11.3 32.6-14.1l0-33.2c0-16.2 13.2-29.4 29.5-29.4l0 0z m185.9-115.3c183.6 108.1 246.5 347.3 140.6 534.4l-2.6 4.6c-8.7 15-28.1 20.1-43.2 11.3-15-8.7-20.1-28.1-11.4-43.1l2.3-3.7c89-157.3 36.2-358.4-117.7-449.1-153.5-90.4-349.8-36.8-438.6 120.1-26.8 47.2-41.3 99.4-43.1 152.6-1.2 35.4-51 42.2-61.6 8.3l-48.9-156c-5.2-16.6 4.1-34.3 20.7-39.5 16.6-5.2 34.3 4.1 39.5 20.7l12.2 39.1 3.5-9.1c4.3-10.7 9.1-21.3 14.5-31.7l8.3-15.5c106.1-187.4 341.5-251.8 525.5-143.4z",
+                "svgColor": "#FFF7A7",
+                "title": [
+                  {
+                    "type": "TEXT",
+                    "text": "降价补差",
+                    "color": "#FFF7A7",
+                    "fontSize": 22,
+                    "bold": true
+                  },
+                  {
+                    "type": "TEXT",
+                    "text": "购买后30天内",
+                    "color": "#FFF7A7",
+                    "fontSize": 16,
+                    "bold": true
+                  }
+                ],
+                "clickColor": "#FED9B8",
+                "clickEvent": {
+                  "type": "FLOATING_LAYER",
+                  "link": "/HomeCoupon.html?minversion=0.0.1&otter_type=v1&otter_ssr_api=/api/lego_bg_home_coupon/get_config/HomeCoupon&otter_minversion=3.1.0&otter_cache_enable=1&cache_expire_duration=86400000&rp=0&pageName=HomeCoupon",
+                  "floatingLayer": {
+                    "title": {
+                      "type": "TEXT",
+                      "text": "致力让您满意",
+                      "color": "#222222",
+                      "fontSize": 20,
+                      "fontWeight": 600,
+                      "bold": true
+                    },
+                    "policy": {
+                      "policyItems": [
+                        {
+                          "title": {
+                            "type": "TEXT",
+                            "text": "物流保障",
+                            "color": "#0A8800",
+                            "fontSize": 18,
+                            "bold": true
+                          },
+                          "headLineText": {
+                            "type": "TEXT",
+                            "text": "Temu与世界各地可靠的物流合作伙伴合作。我们保证您的包裹将安全准时送达。\n如果您购买的商品在运输过程中出现任何问题，例如损坏、丢失或延误，请您放心，我们会尽最大努力为您提供最佳解决方案解决问题。",
+                            "color": "#222222",
+                            "fontSize": 13,
+                            "bold": false
+                          },
+                          "contentList": [
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "送达超时赔付$5.00抵用金",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您的订单未在预计最晚送达日期或之前送达，作为补偿，我们将在该日期后的48小时内为您发放$5.00抵用金(标准物流)。该抵用金将发放到您的Temu抵用金余额中，可用于您的下笔订单。\n在特定情况下，包括但不限于自然灾害和其他不可预见的情况，您可能无法收到延迟交货的赔偿。",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              },
+                              "viewMoreText": [
+                                {
+                                  "type": "TEXT",
+                                  "text": "有关该政策的更多例外情况和详细信息，请参阅我们的政策页面",
+                                  "color": "#777777",
+                                  "fontSize": 13,
+                                  "fontWeight": 400,
+                                  "bold": false,
+                                  "url": "/late-delivery-compensation-policy.html",
+                                  "mark": false
+                                }
+                              ]
+                            },
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "商品损坏可退货",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您收到包裹后，发现某些物品在运输途中丢失或损坏，请放心，您可以轻松地申请这些物品的全额退款。 ",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              }
+                            },
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "轨迹15天无更新可退款",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您的包裹超过15天没有物流更新且未送达，您可以申请免费补发或退款，因为包裹可能在运输途中丢失。如果您在申请退款后收到包裹，您可以自行处置，无需退回。\n在特定情况下，包括但不限于自然灾害等不可抗力情况，您可能无法获得补偿或因未更新而要求退款。",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              },
+                              "viewMoreText": [
+                                {
+                                  "type": "TEXT",
+                                  "text": "有关该政策的更多例外情况和详细信息，请参阅我们的政策页面",
+                                  "color": "#777777",
+                                  "fontSize": 13,
+                                  "fontWeight": 400,
+                                  "bold": false,
+                                  "url": "/package-lost-compensation-policy.html",
+                                  "mark": false
+                                }
+                              ]
+                            },
+                            {
+                              "title": {
+                                "type": "TEXT",
+                                "text": "30天未送达可退款",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": true
+                              },
+                              "subTitle": {
+                                "type": "TEXT",
+                                "text": "如果您的包裹在发货后 30 天内未送达（对于通过卡车运送的包裹或重量为 80 公斤或以上的包裹，需要多 5 天），您可以申请免费重新发货或全额退款。如果包裹在退款后到达，您可以免费保留，无需退回。\n在特定情况下，包括但不限于自然灾害等不可抗力的情况，您可能无法申请免费重新发货或者因未送达而要求退款。",
+                                "color": "#222222",
+                                "fontSize": 13,
+                                "bold": false
+                              },
+                              "viewMoreText": [
+                                {
+                                  "type": "TEXT",
+                                  "text": "有关该政策的更多例外情况和详细信息，请参阅我们的政策页面",
+                                  "color": "#777777",
+                                  "fontSize": 13,
+                                  "fontWeight": 400,
+                                  "bold": false,
+                                  "url": "/no-delivery-compensation-policy.html",
+                                  "mark": false
+                                }
+                              ]
+                            }
+                          ],
+                          "key": "DELIVERY_GUARANTEE"
+                        },
+                        {
+                          "title": {
+                            "type": "TEXT",
+                            "text": "免费退货",
+                            "color": "#0A8800",
+                            "fontSize": 18,
+                            "bold": true
+                          },
+                          "additionalTitle": [
+                            {
+                              "type": "TEXT",
+                              "text": "每笔订单您享有一次免费退货服务，可免费退回一个或多个可退货商品！ 为了避免额外的运输费用并最大限度地减少多次退货对环境的影响，我们建议您选择一并退回所有希望退货的商品。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            },
+                            {
+                              "type": "TEXT",
+                              "text": "大多数商品的退货期限为购买之日起90天。所有符合条件的商品均可在退货期限内以原始状态退回，并获得全额退款。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            }
+                          ],
+                          "key": "FREE_RETURN"
+                        },
+                        {
+                          "title": {
+                            "type": "TEXT",
+                            "text": "降价补差",
+                            "color": "#0A8800",
+                            "fontSize": 18,
+                            "bold": true
+                          },
+                          "additionalTitle": [
+                            {
+                              "type": "TEXT",
+                              "text": "从Temu购买的商品符合我们的价格调整政策。如果所购买商品的售价在同一国家或地区付款后30天内下降，Temu将以订单支付的货币提供差价。在您收到商品之前申请价格调整不会影响您订单的发货。您可以在“我的订单”中选择相关订单，然后点击“降价退差价”按钮来申请价格调整退款。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            },
+                            {
+                              "type": "TEXT",
+                              "text": "促销商品或已不再供应的商品可能不适用于我们的降价补差政策。费用（包括但不限于运费）将不包含在任何降价补差计算中。Temu保留对降价补差政策的最终解释权，保留随时修改本政策条款的权利，以及自行决定是否拒绝任何降价补差的权利。",
+                              "color": "#222222",
+                              "fontSize": 13,
+                              "bold": false
+                            }
+                          ],
+                          "key": "PRICE_ADJUSTMENT"
+                        }
+                      ]
+                    },
+                    "extensionMap": {
+                      "newExpireTimeDisplayStyle": false
+                    }
+                  },
+                  "extensionMap": {}
+                },
+                "bgColor": "#000000",
+                "trackInfo": {
+                  "pageElSn": "213223"
+                },
+                "key": "PRICE_ADJUSTMENT",
+                "ignoreImmersion": false
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "DOWN_APP",
+                "icon": "https://aimg.kwcdn.com/upload_aimg/promo/c06da4e0-a5ea-4c0f-b503-87b93627be10.png.slim.png",
+                "svgPath": "M754.9 108.3c44.2 0.1 80.3 34.5 83.1 78.1l0.2 5.3 0 667.4c-0.1 44.2-34.5 80.4-78.1 83.1l-5.2 0.2-465.8 0c-44.2-0.1-80.4-34.5-83.1-78.1l-0.2-5.2 0-667.4c0.1-44.2 34.5-80.4 78-83.2l5.3-0.2 465.8 0z m-7.2 66.6l-451.4 0c-13.8 0-25.2 10.3-26.9 23.7l-0.2 3.4 0 646.7c0 13.8 10.3 25.2 23.7 26.9l3.4 0.2 451.4 0c13.8 0 25.2-10.3 26.8-23.7l0.2-3.4 0-646.7c0-13.8-10.3-25.2-23.6-26.9l-3.4-0.2z m-218.2 566.2c24.6 0 44.5 19.9 44.5 44.4 0 24.6-19.9 44.5-44.5 44.5-24.6 0-44.5-19.9-44.4-44.5 0-24.6 19.9-44.5 44.4-44.4z m50.2-514.9c17.7 0 32 14.3 32 32 0 17.7-14.3 32-32 32l-115.4 0c-17.7 0-32-14.3-32-32 0-17.7 14.3-32 32-32l115.4 0z",
+                "svgColor": "#FFF7A7",
+                "title": [
+                  {
+                    "type": "TEXT",
+                    "text": "获取 Temu app",
+                    "color": "#FFF7A7",
+                    "fontSize": 22,
+                    "bold": true
+                  }
+                ],
+                "clickColor": "#FED9B8",
+                "clickEvent": {
+                  "type": "DOWNLOAD_DIALOG",
+                  "extensionMap": {}
+                },
+                "bgColor": "#000000",
+                "trackInfo": {
+                  "pageElSn": 203251
+                },
+                "ignoreImmersion": false
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "MERCHANT_REGISTRATION",
+                "displayStyle": "style_02",
+                "title": [
+                  {
+                    "type": "TEXT",
+                    "text": "在 Temu 上销售",
+                    "color": "#FFFFFF",
+                    "fontSize": 22,
+                    "fontWeight": 500,
+                    "bold": true
+                  }
+                ],
+                "buttonVo": {
+                  "type": "TEXT",
+                  "text": "立即加入",
+                  "mark": false
+                },
+                "clickEvent": {
+                  "type": "JUMP_LINK",
+                  "link": "https://seller.temu.com/login.html?login_scene=201&shop_region=211&shop_site=100",
+                  "extensionMap": {}
+                },
+                "trackInfo": {
+                  "bbEntranceStyle": "style_02",
+                  "pageElSn": 244667
+                },
+                "key": "MERCHANT_REGISTRATION",
+                "bgImg": "https://commimg.kwcdn.com/upload_commimg/frontpage/415a3faa-d212-4d68-bad3-104ec7cda894.png",
+                "ignoreImmersion": false
+              }
+            ]
+          }
+        ],
+        "styleType": "DOUBLE_PC_CELL",
+        "benefitEffectStyle": 0,
+        "extensionMap": {
+          "newExpireTimeDisplayStyle": false
+        },
+        "login": false
+      },
+      "serverTime": 1757415904911,
+      "atmosphere": {
+        "type": 92,
+        "pcBenefitVo": {
+          "benefitBgColor": "#1F1F24"
+        },
+        "pcTopBarVo": {
+          "bgColor": "#B1430F",
+          "searchBarHoverColor": "#FFFFFF",
+          "searchInputOpacity": "0.24",
+          "borderColor": "#B1430F",
+          "itemHoverBgColor": "#84310A",
+          "selectedBarBgColor": "#FB7701"
+        },
+        "pcAtmosphereVo": {
+          "promotionSmallIcon": "https://aimg.kwcdn.com/material-put/20150c20c0f/2a8692d3-2033-46fe-a6e0-a11dffc73bd1.png",
+          "bannerBgUrl": "https://aimg.kwcdn.com/material-put/20150c20c0f/579122bf-f315-44bb-89f7-dfe588d12184.png",
+          "bannerBgColor": "#EA8310"
+        },
+        "pcFlashSaleVo": {
+          "countDownBgColor": "#FFFFFF",
+          "countDownFontColor": "#EA8310"
+        },
+        "pcCartVo": {
+          "singleBackground": "https://aimg.kwcdn.com/material-put/20150c20c0f/0ef78c1f-4d40-4ef4-8848-215280f4fc3d.png",
+          "doubleBackground": "https://aimg.kwcdn.com/material-put/20150c20c0f/c60ce9be-004b-4f7d-af19-5305db5f72c9.png",
+          "textColor": "#FFFFFF",
+          "backgroundColor": "#EA8310"
+        }
+      }
+    },
+    "headerData": {
+      "titleBarList": [
+        {
+          "landingSource": 10014,
+          "color": "#222222",
+          "svg": "M542.7 34.1c58.8 0 110.7 40.1 127.6 98.8l0.7 2.5 0.5 1.1c0.3 0.9 0.6 1.8 0.9 2.7l0.7 2.8c6.2 29.5 9.5 59.1 9.5 88.8 0 26.2-2.4 52.3-7.2 78l-1.8 9.2 145.4 0.1c2.5 0 5 0.2 7.5 0.5l1.1 0.1 2.7 0.2c41.3 3.2 79.2 25.6 102.2 61.6l2.6 4.2c15.3 25.2 22.4 54.8 20.2 84.5l0.1-1.4 0.1-1.1 0 1.1c0.1 5.4-0.3 10.6-1.2 15.3l-0.8 3.4-74 340c-2.1 8.1-5.5 15.7-10.1 22.4l0.4-0.8 1.2-1.8-1.6 3.2c-9.9 18.7-23.9 34.8-40.8 47l-4.6 3.2c-21.9 14.4-47 21.9-72.5 21.9-0.9 0-1.7 0-2.5-0.1l-612.3-0.2c-36.4 0-66.4-29.7-68.2-67.4l-0.1-3.6c-0.1-1.6-0.2-2.7 0-4l0.3-389.6c0-34.8 24.3-64.4 57.2-70.1l3.4-0.4c102-11.9 169.3-32.5 200-59 42.2-36.2 80.1-108.7 80.1-154.3 0-78.4 59-138.7 133.3-138.8z m-218.4 460.8c-28.3 0-51.2 22.9-51.2 51.2l0 204.8c0 28.3 22.9 51.2 51.2 51.2 28.3 0 51.2-22.9 51.2-51.2l0-204.8c0-28.3-22.9-51.2-51.2-51.2z",
+          "landingPageElSn": 201345,
+          "pattern": 0,
+          "titleBold": false,
+          "source": 10014,
+          "title": "畅销商品",
+          "type": 1,
+          "scene": "home_title_bar_recommend",
+          "selectSvg": "",
+          "pageSn": 10005,
+          "filterItems": "1:1",
+          "iconImg": "https://aimg.kwcdn.com/upload_aimg/pc/b3eff18e-9548-4108-8e45-2ce7c105992a.png.slim.png",
+          "seoLinkUrl": "/us-zh-Hans/channel/best-sellers.html",
+          "tabScene": "best_seller_tabs",
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"61893b494d9e4feea8c9c45797dd8384\",\"g\":\"0\",\"scene_id\":\"113\",\"mid\":\"69999900\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"uferQLr-tHr0Kkz0w2nligJhlXpbvXT9HMBfQRlLkQ4=\",\"scene\":\"home_title_bar_list\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"0\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415904954\"}",
+          "landingPageSn": 10125,
+          "linkUrl": "/channel/best-sellers.html",
+          "id": 1,
+          "pageElSn": 201341
+        },
+        {
+          "landingSource": 10013,
+          "color": "#222222",
+          "svg": "M848.7 133.8c62.1 0 112.5 52.1 112.4 116.3l0 481c0 64.2-50.4 116.3-112.4 116.3l-212.5 0c-8.9 0-17.5 3.6-23.6 10.1l-86.8 90.5-0.8 0.8c-13 12.6-33.7 12.3-46.4-0.6l-88.5-90.9c-6.2-6.3-14.6-9.9-23.4-9.9l-191.4 0c-59.3 0-107.9-47.4-112.1-107.6l-0.3-8.7 0-481c0-64.2 50.4-116.3 112.4-116.3z m-329.7 178.4c-10-3.4-20.8 2.1-24.1 12.4l-34.2 106.1-108.2 0.8c-6 0-11.7 3-15.2 8-6.3 8.8-4.5 21.1 4 27.6l87.1 66.4-32.7 106.6c-1.8 5.9-0.8 12.4 2.7 17.4 6.1 8.9 18.1 10.9 26.6 4.6l88-65.1 88 65.1c4.9 3.6 11.1 4.6 16.8 2.7 10-3.3 15.6-14.4 12.4-24.7l-32.6-106.6 87-66.4c4.8-3.7 7.7-9.5 7.8-15.7 0.1-10.9-8.4-19.8-19-19.9l-108.1-0.8-34.2-106.1c-1.9-5.9-6.4-10.5-12.1-12.4z",
+          "landingPageElSn": 201343,
+          "pattern": 0,
+          "titleBold": false,
+          "source": 10013,
+          "title": "5星好评",
+          "type": 0,
+          "scene": "home_title_bar_five_star",
+          "pageSn": 10005,
+          "iconImg": "https://aimg.kwcdn.com/upload_aimg/rec/3b83156b-18d5-4206-a250-d5ba1c5f7dc8.png.slim.png",
+          "seoLinkUrl": "/us-zh-Hans/channel/full-star.html",
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"61893b494d9e4feea8c9c45797dd8384\",\"g\":\"0\",\"scene_id\":\"113\",\"mid\":\"69999900\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"uferQLr-tHr0Kkz0w2nligJhlXpbvXT9HMBfQRlLkQ4=\",\"scene\":\"home_title_bar_list\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"1\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415904954\"}",
+          "landingPageSn": 10443,
+          "linkUrl": "/channel/full-star.html",
+          "id": 7,
+          "pageElSn": 206751
+        },
+        {
+          "landingSource": 10040,
+          "color": "#222222",
+          "svg": "M65.8 964.8l80.5-79.8 0-365.7a321.1 321.1 0 0 1 118.5-262.6v466l88.5-87.8v-421.3a281.6 281.6 0 0 1 117-49l5.1 347.4 89.3-87.8v-272.1h103.1v170.5l93.6-92.9v-66.6l111.9 0 4.4 35.8-69.5 73.2 62.9 0-4.4 98-158.7 0-92.1 96.6 249.4 6.5a576.4 576.4 0 0 1-26.4 117.1l-341.5-5.2-98.8 95.9 406 13.1a211.4 211.4 0 0 1-187.3 110.5l-332.8-11-111.9 109.7-26.3-18.3-80.5 79.8h487.9a445.4 445.4 0 0 0 401.5-397.2l0-489.3h-498.1a467.4 467.4 0 0 0-391.3 391.3z",
+          "landingPageElSn": 200024,
+          "pattern": 0,
+          "titleBold": false,
+          "source": 10040,
+          "title": "金秋特惠",
+          "type": 0,
+          "scene": "tf_rec",
+          "pageSn": 10005,
+          "filterItems": "12:1417339207712",
+          "iconImg": "https://aimg.kwcdn.com/upload_aimg/rec/c7ae93e5-3c53-4a9b-8dda-5c653518458c.png.slim.png",
+          "selectIconImg": "https://aimg.kwcdn.com/upload_aimg/rec/6665bedf-da08-4de9-8de0-8ff8f19fb6f7.png.slim.png",
+          "seoLinkUrl": "/us-zh-Hans/attendance/us-25fall-46962-1-a-psurl.html?_x_chnl_src=top_icon&_x_big_sale_name=autumn_arrivals",
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"61893b494d9e4feea8c9c45797dd8384\",\"g\":\"0\",\"scene_id\":\"113\",\"mid\":\"69999900\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"uferQLr-tHr0Kkz0w2nligJhlXpbvXT9HMBfQRlLkQ4=\",\"scene\":\"home_title_bar_list\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"2\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415904954\"}",
+          "landingPageSn": 10215,
+          "linkUrl": "/attendance/us-25fall-46962-1-a-psurl.html?_x_chnl_src=top_icon&_x_big_sale_name=autumn_arrivals",
+          "id": 9,
+          "pageElSn": 201803
+        },
+        {
+          "landingSource": 10013,
+          "color": "#222222",
+          "svg": "M728.8 689.7c53.8 0 97.5 43.7 97.5 97.7 0 53.9-43.6 97.6-97.5 97.6-53.8 0-97.5-43.7-97.4-97.6 0-53.9 43.6-97.6 97.4-97.7z m-460.7 0c53.8 0 97.5 43.7 97.4 97.7 0 53.9-43.6 97.6-97.4 97.6-53.8 0-97.5-43.7-97.5-97.6 0-53.9 43.6-97.6 97.5-97.7z m362.3-543.4c59.4-0.5 108.1 47.2 108.6 106.6l0 52.7 42.3 0.2c92.6 0.3 167.7 75.1 168.2 167.7l1.3 201.8c0.3 43.7-34.1 79.6-77.4 81.5-12.9-64.2-67.3-113.2-134-118l-0.4-176.8 0.1 176.8c-3.4-0.2-6.8-0.4-10.3-0.4-71.8 0-131.7 51.3-144.9 119.4l-171.1 1.5c-13.7-67.4-73.3-118-144.7-118-70.1 0-128.9 48.9-144 114.5-29.7-11.7-50.7-40.5-51-74.4l0-449.7c0-44.5 35.8-80.6 80.3-81.1l477-4.3z m-111 79.9l-140.8 0c-5.9 0-11.2 3.4-13.3 8.6l-76.5 190.9c-0.6 1.5-0.9 3.1-0.9 4.7 0 7.4 6.3 13.3 14.2 13.3l88.3 0-37.3 131.4c-1.3 4.7 0.2 9.8 4 13.1 5.7 5 14.7 4.8 20-0.6l210.8-210.2c2.5-2.5 3.9-5.7 3.8-9.1 0-7.4-6.3-13.3-14.2-13.4l-96.3 0 51.2-110.1c0.8-1.7 1.2-3.5 1.2-5.3 0-7.4-6.3-13.3-14.2-13.3z",
+          "landingPageElSn": 233141,
+          "pattern": 0,
+          "titleBold": false,
+          "source": 10013,
+          "title": "本地仓库",
+          "type": 0,
+          "scene": "local_warehouse_rec_landing",
+          "pageSn": 10005,
+          "seoLinkUrl": "/us-zh-Hans/channel/local-warehouse.html",
+          "tabScene": "local_warehouse_rec_landing",
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"61893b494d9e4feea8c9c45797dd8384\",\"g\":\"0\",\"scene_id\":\"113\",\"mid\":\"69999900\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"uferQLr-tHr0Kkz0w2nligJhlXpbvXT9HMBfQRlLkQ4=\",\"scene\":\"home_title_bar_list\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"3\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415904954\"}",
+          "landingPageSn": 20130,
+          "linkUrl": "/channel/local-warehouse.html",
+          "id": 20,
+          "pageElSn": 233143
+        }
+      ],
+      "titleBarMatcher": {
+        "pathname": "/mall.html"
+      },
+      "searchInfo": {
+        "shadeWords": [
+          {
+            "seoUrl": "",
+            "addFlameType": 0,
+            "shadeWord": "干花",
+            "pSearch": "{\"offset\":\"0\",\"list_id\":\"61893b494d9e4feea8c9c45797dd8384\",\"g\":\"0\",\"scene_id\":\"22\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"J4l__5CahzSwTDWUp6Q2Uh_yXwsoeEMQhhtg_ouALG4=\",\"scene\":\"shade_words\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"search\",\"idx\":\"0\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415904964\"}",
+            "addFlame": false,
+            "extendFields": {},
+            "recommend": "干花",
+            "type": 0,
+            "url": "/search_result.html?search_key=%E5%B9%B2%E8%8A%B1"
+          }
+        ],
+        "searchKey": ""
+      },
+      "userInfo": null,
+      "region": {
+        "regionInfo": {
+          "regionId": 211,
+          "siteId": 100,
+          "regionName": "美国",
+          "regionShortName": "US",
+          "phoneCode": "1",
+          "selectedLang": "简体中文",
+          "selectedCurrency": "$",
+          "supportedLangList": [
+            {
+              "lang": "en",
+              "text": "English"
+            },
+            {
+              "lang": "es",
+              "text": "Español"
+            },
+            {
+              "lang": "fr",
+              "text": "Français"
+            },
+            {
+              "lang": "pt",
+              "text": "Português",
+              "clientLocale": "pt-BR"
+            },
+            {
+              "lang": "ru",
+              "text": "Русский"
+            },
+            {
+              "lang": "ar",
+              "text": "العربية"
+            },
+            {
+              "lang": "ko",
+              "text": "한국어"
+            },
+            {
+              "lang": "zh-Hans",
+              "text": "简体中文"
+            },
+            {
+              "lang": "zh-Hant",
+              "text": "繁體中文"
+            }
+          ],
+          "supportedCurrencyList": [
+            {
+              "currency": "USD",
+              "display": "$"
+            }
+          ],
+          "imageUrl": "https://aimg.kwcdn.com/upload_aimg/openingemail/flags/e9c2ade0-f09a-40d3-80c8-925fd5ed1ba8.png.slim.png",
+          "dr": "udp"
+        }
+      },
+      "cartNum": 0,
+      "cartAmount": 0,
+      "sidebarLayoutSwitch": true,
+      "shoppingCartData": {
+        "frontControlMap": {
+          "eventCardDisappearWaitTime": "7",
+          "soldOutCardText": "售罄的商品已移至页面底部。",
+          "eventCardAppearWaitTime": "3",
+          "goodsDetailFloat2": "0",
+          "jumpingMachineClickLimit": "2",
+          "soldOutCardShowTime": "1",
+          "activityEndRefreshRange": "60",
+          "jumpingMachineOpenShowTime": "3",
+          "jumpingMachineDisappearWaitTime": "5",
+          "eventCardTimeGap": "86400",
+          "jumpingMachineSwitch": "1",
+          "eventCardShowWaitMinTime": "120",
+          "jumpingMachineTimeGap": "86400",
+          "eventCardSwitch": "1",
+          "eventCardShowWaitTime": "3600",
+          "pcEventTipsPlural": "1",
+          "jumpingMachineFirstSelectMaxTime": "3600",
+          "orderTipShowTimesAfterCheckoutFloat": "2",
+          "unavailableEmailHintSwitch": "1",
+          "goodsDetailFloat": "0"
+        },
+        "manualInitSwitch": false,
+        "cartSkuNumMap": {},
+        "cartGoodsNumMap": {},
+        "allAmountSum": 0
+      },
+      "categoryData": {},
+      "toolBarData": {
+        "showMessages": true,
+        "showChatRoom": false,
+        "showFeedback": true
+      },
+      "headerOptions": {
+        "needActivityInfoData": true,
+        "needCategory": true,
+        "needCategoryData": true,
+        "needTitleBar": true,
+        "needSearchBar": true,
+        "needUserInfo": true,
+        "needSupport": true,
+        "needRegion": true,
+        "needShoppingCart": true
+      }
+    },
+    "footerData": {},
+    "layoutOptions": {
+      "needPreloadImage": true,
+      "someApiCsr": true,
+      "footerClientRender": true,
+      "banApiRiskError": false,
+      "needApiErrorInfo": false,
+      "shoppingCartSidebar": true
+    },
+    "preloadImage": [
+      {
+        "url": "https://aimg.kwcdn.com/material-put/20150c20c0f/c60ce9be-004b-4f7d-af19-5305db5f72c9.png",
+        "compressParams": {
+          "quality": 70,
+          "resizeWidth": 300
+        },
+        "imageType": "Sidebar"
+      },
+      {
+        "url": "https://aimg.kwcdn.com/upload_aimg/openingemail/flags/e9c2ade0-f09a-40d3-80c8-925fd5ed1ba8.png.slim.png",
+        "compressParams": {
+          "quality": 70,
+          "resizeWidth": 48
+        },
+        "imageType": "User"
+      },
+      {
+        "url": "https://aimg.kwcdn.com/upload_aimg/upload_aimg/975eadd1-cc14-47e5-9af6-84922577b722.png.slim.png",
+        "compressParams": {
+          "quality": 70,
+          "resizeWidth": 48
+        },
+        "imageType": "User"
+      }
+    ]
+  },
+  "graySceneList": [
+    "cp44684",
+    "cp66199",
+    "cp216316",
+    "cp218762",
+    "cp219816",
+    "cp225384"
+  ],
+  "commonGraySceneList": [],
+  "grayConfig": {
+    "cp214090": {},
+    "cp214091": {},
+    "cp214093": {},
+    "cp166196": {},
+    "cp166198": {},
+    "cp162938": {},
+    "cp204719": {},
+    "cp204720": {},
+    "cp202428": {},
+    "cp213544": {
+      "useVt": "1"
+    },
+    "cp222067": {
+      "useVt": ""
+    },
+    "cp222068": {
+      "useVt": ""
+    },
+    "cp210126": {
+      "value": 1
+    },
+    "cp220712": {
+      "value": 1
+    },
+    "cp220713": {
+      "value": 0
+    },
+    "globalStyle": {
+      "searchInputStyle": 1,
+      "goodsListCartStyle": 2
+    },
+    "cp66199": {
+      "value": true,
+      "supportRegionList": [
+        210,
+        69,
+        211,
+        174,
+        105,
+        101,
+        152,
+        16,
+        165,
+        209,
+        37,
+        12,
+        144,
+        141,
+        20,
+        13,
+        114,
+        192,
+        90,
+        167,
+        64,
+        108,
+        113,
+        96,
+        97,
+        135,
+        5,
+        130,
+        162,
+        53,
+        180,
+        32,
+        50,
+        181,
+        184,
+        126,
+        119,
+        160,
+        128,
+        42,
+        186,
+        163,
+        45,
+        29,
+        159,
+        75,
+        10,
+        14,
+        102,
+        212,
+        98,
+        122,
+        191,
+        54,
+        68,
+        151,
+        79,
+        52,
+        100,
+        91,
+        208
+      ],
+      "notSupportRegionList": []
+    },
+    "cp216316": {
+      "value": true
+    },
+    "cp218762": {
+      "value": true
+    },
+    "cp219816": {
+      "value": true
+    },
+    "cp225384": {}
+  },
+  "initQueryLayoutData": true,
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+  "footerLinkNoFollow": false,
+  "cpExpIdList": [
+    216316,
+    218762,
+    226080,
+    225384,
+    235142,
+    224648,
+    232572
+  ],
+  "faasGrayConfig": {
+    "216316": {
+      "value": true
+    },
+    "218762": {
+      "value": true
+    },
+    "224648": {
+      "value": false
+    },
+    "232572": {
+      "value": true
+    },
+    "245724": {}
+  },
+  "hasOneLogin": false,
+  "query": {
+    "mall_id": "280275145488",
+    "goods_id": "601101979766680",
+    "sticky_type": "3",
+    "_x_sessn_id": "cwm1w1u9up",
+    "refer_page_name": "goods",
+    "refer_page_id": "10032_1757415876736_kzng326npm",
+    "refer_page_sn": "10032"
+  },
+  "isNativePlatform": false,
+  "mallCategoryUseGoodListApi": true,
+  "webpEnable": true,
+  "mallId": 280275145488,
+  "mallSeoParams": true,
+  "extendHeaderData": {
+    "toolBarData": {
+      "showMessages": true,
+      "showChatRoom": false,
+      "showFeedback": true
+    }
+  },
+  "commentStore": {
+    "reviewId": "",
+    "commentHasMore": true,
+    "commentPage": 1,
+    "loadCommentMoreLock": false,
+    "commentInfo": {
+      "mallInfo": {
+        "reviewNum": 0,
+        "reviewNumText": "",
+        "labels": [],
+        "mallReviewLabelShow": false,
+        "expParams": {
+          "picModeAddToCart": "true",
+          "strengthenReviewAuthenticity": "true",
+          "escalatorPicList": "0"
+        },
+        "reviewAuthenticityPopupVo": {
+          "title": "这意味着所有评论者都是在从 Temu 购买商品后发表评论的。",
+          "confirmBtnText": "确定",
+          "legoLinkUrl": "lego.html?lego_ssr_api=%2Fapi%2Flego-transaction-auth-comment-popup%2Fget_config%2Fauth-comment-popup&lego_minversion=2.50.0&lego_type=v8&pageName=auth-comment-popup&lego_cache_enable=1&cache_expire_duration=172800000&rp=0"
+        },
+        "mallReviewLinkUrl": "/mall.html?_bg_fs=1&mall_id=280275145488&tag_code=Reviews&sticky_type=2",
+        "reviewListPageMallReviewEntranceText": "这家店的其他评价"
+      },
+      "reviewNum": 0
+    },
+    "withPhoto": false,
+    "isShowWithPhotoBtn": false,
+    "withPhotoListMap": {},
+    "reviewNumMap": {},
+    "mixedReview": false,
+    "reviewExpParams": {},
+    "selectedSortLabelId": 0,
+    "sortType": 0,
+    "listMap": {},
+    "reviewNum": 0,
+    "expParams": {
+      "picModeAddToCart": "true",
+      "strengthenReviewAuthenticity": "true",
+      "escalatorPicList": "0"
+    },
+    "page": 1,
+    "cacheHide": false,
+    "sortTypeInfoList": [],
+    "selectedLabelId": "",
+    "labels": [],
+    "reviewAuthenticityPopupVo": {
+      "title": "这意味着所有评论者都是在从 Temu 购买商品后发表评论的。",
+      "confirmBtnText": "确定",
+      "legoLinkUrl": "lego.html?lego_ssr_api=%2Fapi%2Flego-transaction-auth-comment-popup%2Fget_config%2Fauth-comment-popup&lego_minversion=2.50.0&lego_type=v8&pageName=auth-comment-popup&lego_cache_enable=1&cache_expire_duration=172800000&rp=0"
+    }
+  },
+  "commonCommentStore": {
+    "commentService": {},
+    "helpfulInfoMap": {}
+  },
+  "commentBigPictureStore": {
+    "listMap": {},
+    "reviewNum": 0,
+    "page": 1,
+    "loadMoreLock": false,
+    "sortPrevHasMore": true,
+    "sortNextHasMore": true,
+    "hasLoadPageMap": {},
+    "allPicReviewList": [],
+    "picPage": 1,
+    "picHasMore": true,
+    "reviewIndex": 0,
+    "popData": null,
+    "reviewExpParams": {},
+    "isSimilarReview": false
+  },
+  "categoryStore": {
+    "isHandledCategory": true,
+    "tabList": [
+      {
+        "tabType": 1,
+        "tagCode": "Items",
+        "tagDesc": "商品",
+        "rank": 0,
+        "isDecorate": false
+      },
+      {
+        "@id": 1,
+        "optId": 6981,
+        "optName": "室内节日照明",
+        "imageUrl": "https://img.kwcdn.com/product/1f66680fb0/fc1c9c20-9db7-4efa-b844-c9c984f5756f_213x213.png",
+        "linkUrl": "/category.html?from_mall=1&opt_id=6981&opt_level=2&mall_id=280275145488&title=%E5%AE%A4%E5%86%85%E8%8A%82%E6%97%A5%E7%85%A7%E6%98%8E",
+        "seoLinkUrl": "/us-zh-Hans/holiday-lighting-o3-6981.html?from_mall=1&opt_id=6981&opt_level=2&mall_id=280275145488&title=%E5%AE%A4%E5%86%85%E8%8A%82%E6%97%A5%E7%85%A7%E6%98%8E",
+        "optType": 2,
+        "priority": 0,
+        "pRec": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"0\",\"scene_id\":\"14\",\"opt_id\":\"6981\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"opt_hash_id\":\"9410774\",\"opt_type\":\"2\",\"goods_source\":\"rec\",\"idx\":\"0\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415905127\"}",
+        "goodsNum": 7,
+        "pattern": 0,
+        "tabType": 0,
+        "disableDup": false,
+        "isFeatured": false,
+        "goodsNumStr": "7",
+        "tagDesc": "室内节日照明",
+        "rank": 6981,
+        "isCategory": true
+      }
+    ],
+    "eventTabList": [],
+    "activeIndex": 0,
+    "moreSectionList": [],
+    "selectCategory": {
+      "fromCategorySelect": false,
+      "tabType": 1,
+      "tagCode": "Items",
+      "tagDesc": "商品",
+      "rank": 0,
+      "isDecorate": false
+    },
+    "hasMore": false,
+    "page": 1,
+    "goodsList": [
+      {
+        "data": {
+          "image": {
+            "id": 204612638490,
+            "url": "https://img.kwcdn.com/product/fancy/7a0ec262-dd42-4f3a-b1ff-c1a53a7851a2.jpg",
+            "width": 1024,
+            "height": 1024,
+            "urlId": "2127768781344682429"
+          },
+          "queryReleScore": 0,
+          "video": {
+            "iconUrl": "https://aimg.kwcdn.com/upload_aimg/temu/35218716-bd3d-4f5a-8877-9771d5140ddd.png.slim.png",
+            "imageUrl": "https://img.kwcdn.com/product/fancy/7a0ec262-dd42-4f3a-b1ff-c1a53a7851a2.jpg",
+            "videoUrl": "https://goods-vod.kwcdn.com/goods-video/750c039a77b2a2124cebd582c1b09c42b9127163.f30.mp4",
+            "url": "https://img.kwcdn.com/product/dc94c1a2fc0f04038aacf3d3608e3ad55e65cc6a.goods.000001.jpeg"
+          },
+          "goodsId": 601101980393224,
+          "mallId": 280275145488,
+          "title": "10/20/24支漂浮蜡烛带魔杖，魔法悬挂LED无焰闪烁茶灯套装，适用于万圣节装饰，12V电池供电锥形灯带遥控器——完美节日派对主题及生日礼物",
+          "thumbUrl": "https://img.kwcdn.com/product/fancy/7a0ec262-dd42-4f3a-b1ff-c1a53a7851a2.jpg",
+          "salesTip": "1.8K+ 已售",
+          "salesTipText": [
+            "1.8K+",
+            "已售"
+          ],
+          "priceInfo": {
+            "price": 1693,
+            "currency": "USD",
+            "priceStr": "$16.93",
+            "marketPrice": 1962,
+            "marketPriceStr": "$19.62",
+            "priceText": [
+              "$",
+              "16.93",
+              ""
+            ],
+            "reductionText": [
+              "-13",
+              "%"
+            ],
+            "marketPriceText": [
+              "$",
+              "19.62",
+              ""
+            ],
+            "reduction": 130,
+            "priceSchema": "16.93",
+            "splitPriceText": [
+              "$",
+              "16",
+              ".93",
+              ""
+            ]
+          },
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"601101980393224\",\"ad_goods\":\"1\",\"scene_id\":\"14\",\"show_price\":\"1693\",\"final_creative_id\":\"1432895012\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"st_model_point\":\"CmAc6MjuPct/QwFcMI+FaY4R0sYYCQkRSXPJkI49jSDu/fQIvhgEXlDS+qaDtpTkR50lgnoiAF4d6lLqRYuvFWWAmyAx35Nl++qq0He9ON+cS3yyjoOs5p7CeITGNXkiHHUQfhheIiQwNWZjNmI1ZC1kYmNmLTQ3MDctODA5OS0wNWJjNjI0Mjg3MTc=\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"image_url_id\":\"2127768781344682429\",\"show_currency\":\"USD\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"0\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"creative_title_id\":\"1886816270391573895\",\"ts\":\"1757415905126\"}",
+          "linkUrl": "goods.html?_bg_fs=1&goods_id=601101980393224&_oak_mp_inf=EIi%2Bj7Cv1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygvq6a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F7a0ec262-dd42-4f3a-b1ff-c1a53a7851a2.jpg&spec_gallery_id=204612638490&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MTY5Mw",
+          "comment": {},
+          "goodsTags": [],
+          "tagsInfo": {
+            "titleHeaderTags": [
+              {
+                "extMap": {
+                  "discountPromotionTag": "{\"text_dx\":0.0,\"text_color\":\"#ffffff\",\"width\":33.0,\"height\":18.0,\"bg_url\":\"https://aimg.kwcdn.com/upload_aimg/commodity/bf83ed61-3d5b-4129-a1ad-942c775a41a9.png\",\"promotion_tag_track\":\"sale_solid\"}"
+                },
+                "marketingTagType": 2000
+              }
+            ]
+          },
+          "visible": true,
+          "optId": 6982,
+          "optType": 3,
+          "pageAlt": "10/20/24支漂浮蜡烛带魔杖，魔法悬挂led无焰闪烁茶灯套装，适用于万圣节装饰，12v电池供电锥形灯带遥控器——完美节日派对主题及生日礼物",
+          "seoLinkUrl": "/us-zh-Hans/-24%E6%94%AF%E6%BC%82%E6%B5%AE%E8%9C%A1%E7%83%9B%E5%B8%A6%E9%AD%94%E6%9D%96-%E9%AD%94%E6%B3%95%E6%82%AC%E6%8C%82led%E6%97%A0%E7%84%B0%E9%97%AA%E7%83%81%E8%8C%B6%E7%81%AF%E5%A5%97%E8%A3%85-%E9%80%82%E7%94%A8%E4%BA%8E%E4%B8%87%E5%9C%A3%E8%8A%82%E8%A3%85%E9%A5%B0-12v%E7%94%B5%E6%B1%A0%E4%BE%9B%E7%94%B5%E9%94%A5%E5%BD%A2%E7%81%AF%E5%B8%A6%E9%81%A5%E6%8E%A7%E5%99%A8-%E5%AE%8C%E7%BE%8E%E8%8A%82%E6%97%A5%E6%B4%BE%E5%AF%B9%E4%B8%BB%E9%A2%98%E5%8F%8A%E7%94%9F%E6%97%A5%E7%A4%BC%E7%89%A9-g-601101980393224.html?&_oak_mp_inf=EIi%2Bj7Cv1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygvq6a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F7a0ec262-dd42-4f3a-b1ff-c1a53a7851a2.jpg&spec_gallery_id=204612638490&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MTY5Mw",
+          "itemType": 0,
+          "benefitText": {
+            "text": "-13%"
+          },
+          "extendFields": {
+            "saleFireFlag": true,
+            "supportTagCarousel": true,
+            "detailId": "112560822253772552"
+          },
+          "soldQuantityPercent": 0,
+          "activityType": 100,
+          "showIndex": 0,
+          "salesNum": "1.8K+",
+          "currentSkuId": 17602407590782,
+          "salesTipTextList": [
+            "已售",
+            "1,825件"
+          ],
+          "wareHouseType": 0,
+          "displayEndTimePercent": 51,
+          "displayEndTime": 1758005999,
+          "adultGoods": false,
+          "skuList": []
+        }
+      },
+      {
+        "data": {
+          "image": {
+            "id": 205708017455,
+            "url": "https://img.kwcdn.com/product/fancy/8658d5fd-1929-48ed-8ddb-98b61b0a74a2.jpg",
+            "width": 1500,
+            "height": 1500,
+            "urlId": "4782228572495588430"
+          },
+          "queryReleScore": 0,
+          "video": {
+            "iconUrl": "https://aimg.kwcdn.com/upload_aimg/temu/35218716-bd3d-4f5a-8877-9771d5140ddd.png.slim.png",
+            "imageUrl": "https://img.kwcdn.com/product/fancy/8658d5fd-1929-48ed-8ddb-98b61b0a74a2.jpg",
+            "videoUrl": "https://goods-vod.kwcdn.com/goods-video/044d553859968163cb1764b79a497739cb577a85.f30.mp4",
+            "url": "https://img.kwcdn.com/product/857abac3a308b6da6f32fb68aeccfe9784401501.goods.000001.jpeg"
+          },
+          "goodsId": 601102280733830,
+          "mallId": 280275145488,
+          "title": "8个发光悬挂女巫帽，带魔杖的魔法浮动女巫帽，5种模式黑色女巫帽无烟蜡烛，电池供电，适合情人节、求婚、家庭、生日晚餐、万圣节装饰，万圣节户外、室内、门廊、树、装饰的灯光",
+          "thumbUrl": "https://img.kwcdn.com/product/fancy/8658d5fd-1929-48ed-8ddb-98b61b0a74a2.jpg",
+          "salesTip": "9 已售",
+          "salesTipText": [
+            "9",
+            "已售"
+          ],
+          "priceInfo": {
+            "price": 3766,
+            "currency": "USD",
+            "priceStr": "$37.66",
+            "priceText": [
+              "$",
+              "37.66",
+              ""
+            ],
+            "reductionText": [],
+            "priceColor": "#FB7701",
+            "priceSchema": "$37.66",
+            "splitPriceText": [
+              "$",
+              "37",
+              ".66",
+              ""
+            ]
+          },
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"601102280733830\",\"ad_goods\":\"1\",\"scene_id\":\"14\",\"show_price\":\"3766\",\"final_creative_id\":\"391757387\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"st_model_point\":\"CmAc6MjuPct/QwFcMI+FaY4R0sYYCQkRSXPJkI49jSDu/fQIvhgEXlDS+qaDtpTkR50lgnoiAF4d6lLqRYuvFWWA8DlexFtUh+Gii0PZpOsn8SqBoDkr1XmbaXXKwpcGD/IQfhheIiQwNWZjNmI1ZC1kYmNmLTQ3MDctODA5OS0wNWJjNjI0Mjg3MTc=\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"image_url_id\":\"4782228572495588430\",\"show_currency\":\"USD\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"1\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"creative_title_id\":\"7441372696738524216\",\"ts\":\"1757415905126\"}",
+          "linkUrl": "goods.html?_bg_fs=1&goods_id=601102280733830&_oak_mp_inf=EIbpqr%2Bw1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygvq6a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F8658d5fd-1929-48ed-8ddb-98b61b0a74a2.jpg&spec_gallery_id=205708017455&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MzkwNQ",
+          "comment": {},
+          "goodsTags": [],
+          "tagsInfo": {
+            "activityIconTags": [
+              {}
+            ],
+            "titleHeaderTags": [
+              {
+                "extMap": {
+                  "discountPromotionTag": "{\"text_dx\":0.0,\"text_color\":\"#ffffff\",\"width\":33.0,\"height\":18.0,\"bg_url\":\"https://aimg.kwcdn.com/upload_aimg/commodity/bf83ed61-3d5b-4129-a1ad-942c775a41a9.png\",\"promotion_tag_track\":\"sale_solid\"}"
+                },
+                "marketingTagType": 2000
+              }
+            ]
+          },
+          "visible": true,
+          "optId": 6982,
+          "optType": 3,
+          "pageAlt": "8个发光悬挂女巫帽，带魔杖的魔法浮动女巫帽，5种模式黑色女巫帽无烟蜡烛，电池供电，适合情人节、求婚、家庭、生日晚餐、万圣节装饰，万圣节户外、室内、门廊、树、装饰的灯光",
+          "seoLinkUrl": "/us-zh-Hans/8%E4%B8%AA%E5%8F%91%E5%85%89%E6%82%AC%E6%8C%82%E5%A5%B3%E5%B7%AB%E5%B8%BD-%E5%B8%A6%E9%AD%94%E6%9D%96%E7%9A%84%E9%AD%94%E6%B3%95%E6%B5%AE%E5%8A%A8%E5%A5%B3%E5%B7%AB%E5%B8%BD-5%E7%A7%8D%E6%A8%A1%E5%BC%8F%E9%BB%91%E8%89%B2%E5%A5%B3%E5%B7%AB%E5%B8%BD%E6%97%A0%E7%83%9F%E8%9C%A1%E7%83%9B-%E7%94%B5%E6%B1%A0%E4%BE%9B%E7%94%B5-%E9%80%82%E5%90%88%E6%83%85%E4%BA%BA%E8%8A%82-%E6%B1%82%E5%A9%9A-%E5%AE%B6%E5%BA%AD-%E7%94%9F%E6%97%A5%E6%99%9A%E9%A4%90-%E4%B8%87%E5%9C%A3%E8%8A%82%E8%A3%85%E9%A5%B0-%E4%B8%87%E5%9C%A3%E8%8A%82%E6%88%B7%E5%A4%96-%E5%AE%A4%E5%86%85-%E9%97%A8%E5%BB%8A-%E6%A0%91-%E8%A3%85%E9%A5%B0%E7%9A%84%E7%81%AF%E5%85%89-g-601102280733830.html?&_oak_mp_inf=EIbpqr%2Bw1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygvq6a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F8658d5fd-1929-48ed-8ddb-98b61b0a74a2.jpg&spec_gallery_id=205708017455&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MzkwNQ",
+          "itemType": 0,
+          "benefitText": {
+            "text": ""
+          },
+          "extendFields": {
+            "supportTagCarousel": true,
+            "detailId": "112576240188109958"
+          },
+          "soldQuantityPercent": 0,
+          "activityType": 13,
+          "showIndex": 1,
+          "salesNum": "9",
+          "currentSkuId": 17603926551400,
+          "salesTipTextList": [
+            "已售",
+            "9件"
+          ],
+          "wareHouseType": 0,
+          "displayEndTimePercent": 51,
+          "displayEndTime": 1758005999,
+          "adultGoods": false,
+          "skuList": []
+        }
+      },
+      {
+        "data": {
+          "image": {
+            "id": 208552679960,
+            "url": "https://img.kwcdn.com/product/fancy/3fd109be-60ec-4170-be4b-f3e23b574f8c.jpg",
+            "width": 1024,
+            "height": 1024,
+            "urlId": "4191122631972618170"
+          },
+          "queryReleScore": 0,
+          "video": {
+            "iconUrl": "https://aimg.kwcdn.com/upload_aimg/temu/35218716-bd3d-4f5a-8877-9771d5140ddd.png.slim.png",
+            "imageUrl": "https://img.kwcdn.com/product/fancy/3fd109be-60ec-4170-be4b-f3e23b574f8c.jpg",
+            "videoUrl": "https://goods-vod.kwcdn.com/goods-video/69599017a3d51b91311e3f0612ea63ef1a6bddb0gs2CV.f30.mp4",
+            "url": "https://img.kwcdn.com/product/f5efa5b2763f7650e48b5017f9940dcf40b7c00a.temu.000001.jpeg"
+          },
+          "goodsId": 601102910975452,
+          "mallId": 280275145488,
+          "title": "14个无焰LED蜡烛，带自动开/关传感器 - 真实的舞动火焰效果，电池供电的窗户蜡烛，带有纳米粘合条，适用于圣诞节、万圣节、婚礼、派对装饰 - 室内/室外安全，节能LED照明（14个计数），节日家居装饰，温暖的光泽，耐用结构，家居装饰师",
+          "thumbUrl": "https://img.kwcdn.com/product/fancy/3fd109be-60ec-4170-be4b-f3e23b574f8c.jpg",
+          "salesTip": "2 已售",
+          "salesTipText": [
+            "2",
+            "已售"
+          ],
+          "priceInfo": {
+            "price": 1649,
+            "currency": "USD",
+            "priceStr": "$16.49",
+            "priceText": [
+              "$",
+              "16.49",
+              ""
+            ],
+            "reductionText": [],
+            "priceColor": "#FB7701",
+            "priceSchema": "$16.49",
+            "splitPriceText": [
+              "$",
+              "16",
+              ".49",
+              ""
+            ]
+          },
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"601102910975452\",\"ad_goods\":\"1\",\"scene_id\":\"14\",\"show_price\":\"1649\",\"final_creative_id\":\"643254370\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"st_model_point\":\"CmAc6MjuPct/QwFcMI+FaY4R0sYYCQkRSXPJkI49jSDu/fQIvhgEXlDS+qaDtpTkR50lgnoiAF4d6lLqRYuvFWWA6FScyCmbCprqBH17dvv5rcBA/Y587vqrwXLagYE6N9AQfhhdIiQwNWZjNmI1ZC1kYmNmLTQ3MDctODA5OS0wNWJjNjI0Mjg3MTc=\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"image_url_id\":\"4191122631972618170\",\"show_currency\":\"USD\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"2\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"creative_title_id\":\"6614781245043144084\",\"ts\":\"1757415905126\"}",
+          "linkUrl": "goods.html?_bg_fs=1&goods_id=601102910975452&_oak_mp_inf=ENzb7euy1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygvq6a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F3fd109be-60ec-4170-be4b-f3e23b574f8c.jpg&spec_gallery_id=208552679960&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MjA2Nw",
+          "comment": {},
+          "goodsTags": [],
+          "tagsInfo": {
+            "activityIconTags": [
+              {}
+            ],
+            "titleHeaderTags": [
+              {
+                "extMap": {
+                  "discountPromotionTag": "{\"text_dx\":0.0,\"text_color\":\"#ffffff\",\"width\":33.0,\"height\":18.0,\"bg_url\":\"https://aimg.kwcdn.com/upload_aimg/commodity/bf83ed61-3d5b-4129-a1ad-942c775a41a9.png\",\"promotion_tag_track\":\"sale_solid\"}"
+                },
+                "marketingTagType": 2000
+              }
+            ]
+          },
+          "visible": true,
+          "optId": 6982,
+          "optType": 3,
+          "pageAlt": "14个无焰led蜡烛，带自动开/关传感器 - 真实的舞动火焰效果，电池供电的窗户蜡烛，带有纳米粘合条，适用于圣诞节、万圣节、婚礼、派对装饰 - 室内/室外安全，节能led照明（14个计数），节日家居装饰，温暖的光泽，耐用结构，家居装饰师",
+          "seoLinkUrl": "/us-zh-Hans/14%E4%B8%AA%E6%97%A0%E7%84%B0led%E8%9C%A1%E7%83%9B-%E5%B8%A6%E8%87%AA%E5%8A%A8%E5%BC%80-%E5%85%B3%E4%BC%A0%E6%84%9F%E5%99%A8-%E7%9C%9F%E5%AE%9E%E7%9A%84%E8%88%9E%E5%8A%A8%E7%81%AB%E7%84%B0%E6%95%88%E6%9E%9C-%E7%94%B5%E6%B1%A0%E4%BE%9B%E7%94%B5%E7%9A%84%E7%AA%97%E6%88%B7%E8%9C%A1%E7%83%9B-%E5%B8%A6%E6%9C%89%E7%BA%B3%E7%B1%B3%E7%B2%98%E5%90%88%E6%9D%A1-%E9%80%82%E7%94%A8%E4%BA%8E%E5%9C%A3%E8%AF%9E%E8%8A%82-%E4%B8%87%E5%9C%A3%E8%8A%82-%E5%A9%9A%E7%A4%BC-%E6%B4%BE%E5%AF%B9%E8%A3%85%E9%A5%B0-%E5%AE%A4%E5%86%85-%E5%AE%A4%E5%A4%96%E5%AE%89%E5%85%A8-%E8%8A%82%E8%83%BDled%E7%85%A7%E6%98%8E-14%E4%B8%AA%E8%AE%A1%E6%95%B0-%E8%8A%82%E6%97%A5%E5%AE%B6%E5%B1%85%E8%A3%85%E9%A5%B0-%E6%B8%A9%E6%9A%96%E7%9A%84%E5%85%89%E6%B3%BD-%E8%80%90%E7%94%A8%E7%BB%93%E6%9E%84-%E5%AE%B6%E5%B1%85%E8%A3%85%E9%A5%B0%E5%B8%88-g-601102910975452.html?&_oak_mp_inf=ENzb7euy1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygvq6a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F3fd109be-60ec-4170-be4b-f3e23b574f8c.jpg&spec_gallery_id=208552679960&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MjA2Nw",
+          "itemType": 0,
+          "benefitText": {
+            "text": ""
+          },
+          "extendFields": {
+            "supportTagCarousel": true,
+            "detailId": "112591616414281180"
+          },
+          "soldQuantityPercent": 0,
+          "activityType": 13,
+          "showIndex": 2,
+          "salesNum": "2",
+          "currentSkuId": 17607027119134,
+          "salesTipTextList": [
+            "已售",
+            "2件"
+          ],
+          "wareHouseType": 0,
+          "displayEndTimePercent": 49,
+          "displayEndTime": 1758729599,
+          "adultGoods": false,
+          "skuList": []
+        }
+      },
+      {
+        "data": {
+          "image": {
+            "id": 601102155789931,
+            "url": "https://img.kwcdn.com/product/fancy/3c405cdf-86a4-4f0a-89a0-6fdafc84c211.jpg",
+            "width": 375,
+            "height": 375,
+            "urlId": "1198587528768699879"
+          },
+          "queryReleScore": 0,
+          "video": {
+            "iconUrl": "https://aimg.kwcdn.com/upload_aimg/temu/35218716-bd3d-4f5a-8877-9771d5140ddd.png.slim.png",
+            "imageUrl": "https://img.kwcdn.com/product/fancy/3c405cdf-86a4-4f0a-89a0-6fdafc84c211.jpg",
+            "videoUrl": "https://goods-vod.kwcdn.com/goods-video/750c039a77b2a2124cebd582c1b09c42b9127163.f30.mp4",
+            "url": "https://img.kwcdn.com/product/dc94c1a2fc0f04038aacf3d3608e3ad55e65cc6a.goods.000001.jpeg"
+          },
+          "goodsId": 601102155789931,
+          "mallId": 280275145488,
+          "title": "10/24 浮动蜡烛，带有魔杖和悬挂功能，闪烁的温暖光，火焰消失的浮动 LED 蜡烛，带有遥控器 | 电池供电的圆锥形蜡烛套装 | 适合节日主题派对 | 礼物 | 派对装饰 | 万圣节",
+          "thumbUrl": "https://img.kwcdn.com/product/fancy/3c405cdf-86a4-4f0a-89a0-6fdafc84c211.jpg",
+          "salesTip": "316 已售",
+          "salesTipText": [
+            "316",
+            "已售"
+          ],
+          "priceInfo": {
+            "price": 1995,
+            "currency": "USD",
+            "priceStr": "$19.95",
+            "priceText": [
+              "$",
+              "19.95",
+              ""
+            ],
+            "reductionText": [],
+            "priceColor": "#FB7701",
+            "priceSchema": "19.95",
+            "splitPriceText": [
+              "$",
+              "19",
+              ".95",
+              ""
+            ]
+          },
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"601102155789931\",\"ad_goods\":\"0\",\"scene_id\":\"14\",\"show_price\":\"1995\",\"final_creative_id\":\"1505172576\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"st_model_point\":\"CmAc6MjuPct/QwFcMI+FaY4R0sYYCQkRSXPJkI49jSDu/fQIvhgEXlDS+qaDtpTkR50lgnoiAF4d6lLqRYuvFWWAcdAgyJDzB3E1SREewnTgqVVdfrCpKIb9rylc/ilbTSEQfhheIiQwNWZjNmI1ZC1kYmNmLTQ3MDctODA5OS0wNWJjNjI0Mjg3MTc=\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"image_url_id\":\"1198587528768699879\",\"show_currency\":\"USD\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"3\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"creative_title_id\":\"3147613398514301087\",\"ts\":\"1757415905126\"}",
+          "linkUrl": "goods.html?_bg_fs=1&goods_id=601102155789931&_oak_mp_inf=EOvs4IOw1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygvq6a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F3c405cdf-86a4-4f0a-89a0-6fdafc84c211.jpg&spec_gallery_id=601102155789931&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MTk5NQ",
+          "comment": {},
+          "goodsTags": [],
+          "tagsInfo": {
+            "activityIconTags": [
+              {
+                "width": 24,
+                "height": 24,
+                "iconImg": "https://aimg.kwcdn.com/upload_aimg_b/search/0f7bbe9c-599b-4380-8c8a-7ea42ba4db03.png"
+              }
+            ],
+            "todayTags": [
+              {
+                "text": "最后1天",
+                "tagId": 1004,
+                "extMap": {}
+              }
+            ]
+          },
+          "visible": true,
+          "optId": 6982,
+          "optType": 3,
+          "pageAlt": "10/24 浮动蜡烛，带有魔杖和悬挂功能，闪烁的温暖光，火焰消失的浮动 led 蜡烛，带有遥控器 | 电池供电的圆锥形蜡烛套装 | 适合节日主题派对 | 礼物 | 派对装饰 | 万圣节",
+          "seoLinkUrl": "/us-zh-Hans/-%E6%B5%AE%E5%8A%A8%E8%9C%A1%E7%83%9B-%E5%B8%A6%E6%9C%89%E9%AD%94%E6%9D%96%E5%92%8C%E6%82%AC%E6%8C%82%E5%8A%9F%E8%83%BD-%E9%97%AA%E7%83%81%E7%9A%84%E6%B8%A9%E6%9A%96%E5%85%89-%E7%81%AB%E7%84%B0%E6%B6%88%E5%A4%B1%E7%9A%84%E6%B5%AE%E5%8A%A8-led-%E8%9C%A1%E7%83%9B-%E5%B8%A6%E6%9C%89%E9%81%A5%E6%8E%A7%E5%99%A8-%E7%94%B5%E6%B1%A0%E4%BE%9B%E7%94%B5%E7%9A%84%E5%9C%86%E9%94%A5%E5%BD%A2%E8%9C%A1%E7%83%9B%E5%A5%97%E8%A3%85-%E9%80%82%E5%90%88%E8%8A%82%E6%97%A5%E4%B8%BB%E9%A2%98%E6%B4%BE%E5%AF%B9-%E7%A4%BC%E7%89%A9-%E6%B4%BE%E5%AF%B9%E8%A3%85%E9%A5%B0-%E4%B8%87%E5%9C%A3%E8%8A%82-g-601102155789931.html?&_oak_mp_inf=EOvs4IOw1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygvq6a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F3c405cdf-86a4-4f0a-89a0-6fdafc84c211.jpg&spec_gallery_id=601102155789931&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MTk5NQ",
+          "itemType": 0,
+          "benefitText": {
+            "text": ""
+          },
+          "extendFields": {
+            "supportTagCarousel": true,
+            "detailId": "112563079770748523"
+          },
+          "soldQuantityPercent": 0,
+          "activityType": 2,
+          "showIndex": 3,
+          "salesNum": "316",
+          "currentSkuId": 17603293279977,
+          "salesTipTextList": [
+            "已售",
+            "316件"
+          ],
+          "wareHouseType": 0,
+          "displayEndTimePercent": 88,
+          "displayEndTime": 1757487599,
+          "adultGoods": false,
+          "skuList": []
+        }
+      },
+      {
+        "data": {
+          "image": {
+            "id": 204636641000,
+            "url": "https://img.kwcdn.com/product/fancy/0f22602c-1c97-4e46-9ed6-789bd44100c6.jpg",
+            "width": 1500,
+            "height": 1500,
+            "urlId": "547705752389097538"
+          },
+          "queryReleScore": 0,
+          "video": {
+            "iconUrl": "https://aimg.kwcdn.com/upload_aimg/temu/35218716-bd3d-4f5a-8877-9771d5140ddd.png.slim.png",
+            "imageUrl": "https://img.kwcdn.com/product/fancy/0f22602c-1c97-4e46-9ed6-789bd44100c6.jpg",
+            "videoUrl": "https://goods-vod.kwcdn.com/goods-video/655b21a2f249a7a1870a064634608993ce102418.f30.mp4",
+            "url": "https://img.kwcdn.com/product/94cdb70d04d7d11f358b3657f0983a898ec05bec.goods.000001.jpeg"
+          },
+          "goodsId": 601101979766680,
+          "mallId": 280275145488,
+          "title": "12件装遥控LED浮动蜡烛 | 无焰细长蜡烛 | 闪烁暖光，电池供电 | 圣诞树装饰 | 适合节日派对|生日礼物|派对布置 | 配水晶球挂钩",
+          "thumbUrl": "https://img.kwcdn.com/product/fancy/0f22602c-1c97-4e46-9ed6-789bd44100c6.jpg",
+          "salesTip": "470 已售",
+          "salesTipText": [
+            "470",
+            "已售"
+          ],
+          "priceInfo": {
+            "price": 2987,
+            "currency": "USD",
+            "priceStr": "$29.87",
+            "marketPrice": 4061,
+            "marketPriceStr": "$40.61",
+            "priceText": [
+              "$",
+              "29.87",
+              ""
+            ],
+            "reductionText": [
+              "-26",
+              "%"
+            ],
+            "marketPriceText": [
+              "$",
+              "40.61",
+              ""
+            ],
+            "reduction": 260,
+            "priceColor": "#FB7701",
+            "priceSchema": "29.87",
+            "splitPriceText": [
+              "$",
+              "29",
+              ".87",
+              ""
+            ]
+          },
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"601101979766680\",\"ad_goods\":\"1\",\"scene_id\":\"14\",\"show_price\":\"2987\",\"final_creative_id\":\"1975755104\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"st_model_point\":\"CmAc6MjuPct/QwFcMI+FaY4R0sYYCQkRSXPJkI49jSDu/fQIvhgEXlDS+qaDtpTkR50lgnoiAF4d6lLqRYuvFWWA66hnjekmE9KYpo07b6A2VxFm2TVXtQFaKM8t2dV3470QfhheIiQwNWZjNmI1ZC1kYmNmLTQ3MDctODA5OS0wNWJjNjI0Mjg3MTc=\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"image_url_id\":\"547705752389097538\",\"show_currency\":\"USD\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"4\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"creative_title_id\":\"7631291728738107575\",\"ts\":\"1757415905126\"}",
+          "linkUrl": "goods.html?_bg_fs=1&goods_id=601101979766680&_oak_mp_inf=EJif6a%2Bv1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygv66a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F0f22602c-1c97-4e46-9ed6-789bd44100c6.jpg&spec_gallery_id=204636641000&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=Mjk4Nw",
+          "comment": {},
+          "goodsTags": [],
+          "tagsInfo": {
+            "activityIconTags": [
+              {
+                "width": 24,
+                "height": 24,
+                "iconImg": "https://aimg.kwcdn.com/upload_aimg_b/search/0f7bbe9c-599b-4380-8c8a-7ea42ba4db03.png"
+              }
+            ]
+          },
+          "visible": true,
+          "optId": 6982,
+          "optType": 3,
+          "pageAlt": "12件装遥控led浮动蜡烛 | 无焰细长蜡烛 | 闪烁暖光，电池供电 | 圣诞树装饰 | 适合节日派对|生日礼物|派对布置 | 配水晶球挂钩",
+          "seoLinkUrl": "/us-zh-Hans/12%E4%BB%B6%E8%A3%85%E9%81%A5%E6%8E%A7led%E6%B5%AE%E5%8A%A8%E8%9C%A1%E7%83%9B-%E6%97%A0%E7%84%B0%E7%BB%86%E9%95%BF%E8%9C%A1%E7%83%9B-%E9%97%AA%E7%83%81%E6%9A%96%E5%85%89-%E7%94%B5%E6%B1%A0%E4%BE%9B%E7%94%B5-%E5%9C%A3%E8%AF%9E%E6%A0%91%E8%A3%85%E9%A5%B0-%E9%80%82%E5%90%88%E8%8A%82%E6%97%A5%E6%B4%BE%E5%AF%B9-%E7%94%9F%E6%97%A5%E7%A4%BC%E7%89%A9-%E6%B4%BE%E5%AF%B9%E5%B8%83%E7%BD%AE-%E9%85%8D%E6%B0%B4%E6%99%B6%E7%90%83%E6%8C%82%E9%92%A9-g-601101979766680.html?&_oak_mp_inf=EJif6a%2Bv1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygv66a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F0f22602c-1c97-4e46-9ed6-789bd44100c6.jpg&spec_gallery_id=204636641000&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=Mjk4Nw",
+          "itemType": 0,
+          "benefitText": {
+            "text": "-26%"
+          },
+          "extendFields": {
+            "supportTagCarousel": true,
+            "detailId": "112571825465020312"
+          },
+          "soldQuantityPercent": 6,
+          "activityType": 2,
+          "showIndex": 4,
+          "salesNum": "470",
+          "currentSkuId": 17602403536272,
+          "salesTipTextList": [
+            "已售",
+            "470件"
+          ],
+          "wareHouseType": 0,
+          "displayEndTimePercent": 17,
+          "displayEndTime": 1757919599,
+          "adultGoods": false,
+          "skuList": []
+        }
+      },
+      {
+        "data": {
+          "image": {
+            "id": 204541826854,
+            "url": "https://img.kwcdn.com/product/fancy/d7efe3a3-811d-4c4f-87e1-4006f178556f.jpg",
+            "width": 1600,
+            "height": 1600,
+            "urlId": "2950478431112920428"
+          },
+          "queryReleScore": 0,
+          "video": {
+            "iconUrl": "https://aimg.kwcdn.com/upload_aimg/temu/35218716-bd3d-4f5a-8877-9771d5140ddd.png.slim.png",
+            "imageUrl": "https://img.kwcdn.com/product/fancy/d7efe3a3-811d-4c4f-87e1-4006f178556f.jpg",
+            "videoUrl": "https://goods-vod.kwcdn.com/goods-video/e9427976e1524041e13abaafce2e4d4a0b8dbc2b.f30.mp4",
+            "url": "https://img.kwcdn.com/product/82cbc02fff1f4856a352fbbbb5b41e61a021fbc5.goods.000001.jpeg"
+          },
+          "goodsId": 601101979336114,
+          "mallId": 280275145488,
+          "title": "12支象牙色柱形蜡烛，无烟无焰LED闪烁暖光漂浮茶灯，带遥控器电池操作锥形蜡烛套装，适用于节日主题派对、万圣节、感恩节、圣诞节、生日礼物派对装饰及节日庆典",
+          "thumbUrl": "https://img.kwcdn.com/product/fancy/d7efe3a3-811d-4c4f-87e1-4006f178556f.jpg",
+          "salesTip": "201 已售",
+          "salesTipText": [
+            "201",
+            "已售"
+          ],
+          "priceInfo": {
+            "price": 1345,
+            "currency": "USD",
+            "priceStr": "$13.45",
+            "marketPrice": 2707,
+            "marketPriceStr": "$27.07",
+            "priceText": [
+              "$",
+              "13.45",
+              ""
+            ],
+            "reductionText": [
+              "-50",
+              "%"
+            ],
+            "marketPriceText": [
+              "$",
+              "27.07",
+              ""
+            ],
+            "reduction": 500,
+            "priceColor": "#FB7701",
+            "priceSchema": "13.45",
+            "splitPriceText": [
+              "$",
+              "13",
+              ".45",
+              ""
+            ]
+          },
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"601101979336114\",\"ad_goods\":\"0\",\"scene_id\":\"14\",\"show_price\":\"1345\",\"final_creative_id\":\"713546347\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"st_model_point\":\"CmAc6MjuPct/QwFcMI+FaY4R0sYYCQkRSXPJkI49jSDu/fQIvhgEXlDS+qaDtpTkR50lgnoiAF4d6lLqRYuvFWWA/6moMvoXk1QJs/WTzYe5yzHP/5PByIQ0oXRR2HVKfnEQfhheIiQwNWZjNmI1ZC1kYmNmLTQ3MDctODA5OS0wNWJjNjI0Mjg3MTc=\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"image_url_id\":\"2950478431112920428\",\"show_currency\":\"USD\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"5\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"creative_title_id\":\"630076494432710268\",\"ts\":\"1757415905126\"}",
+          "linkUrl": "goods.html?_bg_fs=1&goods_id=601101979336114&_oak_mp_inf=ELL7zq%2Bv1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygv66a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2Fd7efe3a3-811d-4c4f-87e1-4006f178556f.jpg&spec_gallery_id=204541826854&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MTM0NQ",
+          "comment": {},
+          "goodsTags": [],
+          "tagsInfo": {
+            "activityIconTags": [
+              {}
+            ],
+            "titleHeaderTags": [
+              {
+                "extMap": {
+                  "discountPromotionTag": "{\"text_dx\":0.0,\"text_color\":\"#ffffff\",\"width\":33.0,\"height\":18.0,\"bg_url\":\"https://aimg.kwcdn.com/upload_aimg/commodity/bf83ed61-3d5b-4129-a1ad-942c775a41a9.png\",\"promotion_tag_track\":\"sale_solid\"}"
+                },
+                "marketingTagType": 2000
+              }
+            ]
+          },
+          "visible": true,
+          "optId": 6982,
+          "optType": 3,
+          "pageAlt": "12支象牙色柱形蜡烛，无烟无焰led闪烁暖光漂浮茶灯，带遥控器电池操作锥形蜡烛套装，适用于节日主题派对、万圣节、感恩节、圣诞节、生日礼物派对装饰及节日庆典",
+          "seoLinkUrl": "/us-zh-Hans/12%E6%94%AF%E8%B1%A1%E7%89%99%E8%89%B2%E6%9F%B1%E5%BD%A2%E8%9C%A1%E7%83%9B-%E6%97%A0%E7%83%9F%E6%97%A0%E7%84%B0led%E9%97%AA%E7%83%81%E6%9A%96%E5%85%89%E6%BC%82%E6%B5%AE%E8%8C%B6%E7%81%AF-%E5%B8%A6%E9%81%A5%E6%8E%A7%E5%99%A8%E7%94%B5%E6%B1%A0%E6%93%8D%E4%BD%9C%E9%94%A5%E5%BD%A2%E8%9C%A1%E7%83%9B%E5%A5%97%E8%A3%85-%E9%80%82%E7%94%A8%E4%BA%8E%E8%8A%82%E6%97%A5%E4%B8%BB%E9%A2%98%E6%B4%BE%E5%AF%B9-%E4%B8%87%E5%9C%A3%E8%8A%82-%E6%84%9F%E6%81%A9%E8%8A%82-%E5%9C%A3%E8%AF%9E%E8%8A%82-%E7%94%9F%E6%97%A5%E7%A4%BC%E7%89%A9%E6%B4%BE%E5%AF%B9%E8%A3%85%E9%A5%B0%E5%8F%8A%E8%8A%82%E6%97%A5%E5%BA%86%E5%85%B8-g-601101979336114.html?&_oak_mp_inf=ELL7zq%2Bv1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygv66a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2Fd7efe3a3-811d-4c4f-87e1-4006f178556f.jpg&spec_gallery_id=204541826854&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MTM0NQ",
+          "itemType": 0,
+          "benefitText": {
+            "text": "-50%"
+          },
+          "extendFields": {
+            "supportTagCarousel": true,
+            "detailId": "112536656788045234"
+          },
+          "soldQuantityPercent": 2,
+          "activityType": 13,
+          "showIndex": 5,
+          "salesNum": "201",
+          "currentSkuId": 17602400594436,
+          "salesTipTextList": [
+            "已售",
+            "201件"
+          ],
+          "wareHouseType": 0,
+          "displayEndTimePercent": 87,
+          "displayEndTime": 1757746799,
+          "adultGoods": false,
+          "skuList": []
+        }
+      },
+      {
+        "data": {
+          "image": {
+            "id": 208314689859,
+            "url": "https://img.kwcdn.com/product/fancy/4b86146f-4ff3-4849-8db4-dc0b0706a430.jpg",
+            "width": 800,
+            "height": 800,
+            "urlId": "746842549612007656"
+          },
+          "queryReleScore": 0,
+          "video": {
+            "iconUrl": "https://aimg.kwcdn.com/upload_aimg/temu/35218716-bd3d-4f5a-8877-9771d5140ddd.png.slim.png",
+            "imageUrl": "https://img.kwcdn.com/product/fancy/4b86146f-4ff3-4849-8db4-dc0b0706a430.jpg",
+            "videoUrl": "https://goods-vod.kwcdn.com/goods-video/e9427976e1524041e13abaafce2e4d4a0b8dbc2b.f30.mp4",
+            "url": "https://img.kwcdn.com/product/82cbc02fff1f4856a352fbbbb5b41e61a021fbc5.goods.000001.jpeg"
+          },
+          "goodsId": 601102935092725,
+          "mallId": 280275145488,
+          "title": "12支圣诞树蜡烛串灯，室内外LED无焰蜡烛带遥控棒和挂绳，用于圣诞节、假日婚礼派对装饰，暖白色。圣诞装饰品，圣诞桌饰",
+          "thumbUrl": "https://img.kwcdn.com/product/fancy/4b86146f-4ff3-4849-8db4-dc0b0706a430.jpg",
+          "salesTip": "2 已售",
+          "salesTipText": [
+            "2",
+            "已售"
+          ],
+          "priceInfo": {
+            "price": 1504,
+            "currency": "USD",
+            "priceStr": "$15.04",
+            "marketPrice": 2707,
+            "marketPriceStr": "$27.07",
+            "priceText": [
+              "$",
+              "15.04",
+              ""
+            ],
+            "reductionText": [
+              "-44",
+              "%"
+            ],
+            "marketPriceText": [
+              "$",
+              "27.07",
+              ""
+            ],
+            "reduction": 440,
+            "priceColor": "#FB7701",
+            "priceSchema": "15.04",
+            "splitPriceText": [
+              "$",
+              "15",
+              ".04",
+              ""
+            ]
+          },
+          "pRec": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"601102935092725\",\"ad_goods\":\"1\",\"scene_id\":\"14\",\"show_price\":\"1504\",\"final_creative_id\":\"20098621\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"st_model_point\":\"CmAc6MjuPct/QwFcMI+FaY4R0sYYCQkRSXPJkI49jSDu/fQIvhgEXlDS+qaDtpTkR50lgnoiAF4d6lLqRYuvFWWADB/weqYed1ndvOVDGu/Gn5bBidZ6M/RcTyxP/2CUqswQfhheIiQwNWZjNmI1ZC1kYmNmLTQ3MDctODA5OS0wNWJjNjI0Mjg3MTc=\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"image_url_id\":\"746842549612007656\",\"show_currency\":\"USD\",\"opt_type\":\"0\",\"goods_source\":\"rec\",\"idx\":\"6\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"creative_title_id\":\"1589859865552560372\",\"ts\":\"1757415905127\"}",
+          "linkUrl": "goods.html?_bg_fs=1&goods_id=601102935092725&_oak_mp_inf=EPXbrfey1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygv66a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F4b86146f-4ff3-4849-8db4-dc0b0706a430.jpg&spec_gallery_id=208314689859&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MTUwNA",
+          "comment": {},
+          "goodsTags": [],
+          "tagsInfo": {
+            "activityIconTags": [
+              {}
+            ],
+            "titleHeaderTags": [
+              {
+                "extMap": {
+                  "discountPromotionTag": "{\"text_dx\":0.0,\"text_color\":\"#ffffff\",\"width\":33.0,\"height\":18.0,\"bg_url\":\"https://aimg.kwcdn.com/upload_aimg/commodity/bf83ed61-3d5b-4129-a1ad-942c775a41a9.png\",\"promotion_tag_track\":\"sale_solid\"}"
+                },
+                "marketingTagType": 2000
+              }
+            ]
+          },
+          "visible": true,
+          "optId": 6982,
+          "optType": 3,
+          "pageAlt": "12支圣诞树蜡烛串灯，室内外led无焰蜡烛带遥控棒和挂绳，用于圣诞节、假日婚礼派对装饰，暖白色。圣诞装饰品，圣诞桌饰",
+          "seoLinkUrl": "/us-zh-Hans/12%E6%94%AF%E5%9C%A3%E8%AF%9E%E6%A0%91%E8%9C%A1%E7%83%9B%E4%B8%B2%E7%81%AF-%E5%AE%A4%E5%86%85%E5%A4%96led%E6%97%A0%E7%84%B0%E8%9C%A1%E7%83%9B%E5%B8%A6%E9%81%A5%E6%8E%A7%E6%A3%92%E5%92%8C%E6%8C%82%E7%BB%B3-%E7%94%A8%E4%BA%8E%E5%9C%A3%E8%AF%9E%E8%8A%82-%E5%81%87%E6%97%A5%E5%A9%9A%E7%A4%BC%E6%B4%BE%E5%AF%B9%E8%A3%85%E9%A5%B0-%E6%9A%96%E7%99%BD%E8%89%B2-%E5%9C%A3%E8%AF%9E%E8%A3%85%E9%A5%B0%E5%93%81-%E5%9C%A3%E8%AF%9E%E6%A1%8C%E9%A5%B0-g-601102935092725.html?&_oak_mp_inf=EPXbrfey1ogBGhVuNHlkbGsxY3drc2hqd2pvN3pyd2Ygv66a8ZIz&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F4b86146f-4ff3-4849-8db4-dc0b0706a430.jpg&spec_gallery_id=208314689859&refer_page_sn=10040&refer_source=10018&freesia_scene=14&_oak_freesia_scene=14&_oak_rec_ext_1=MTUwNA",
+          "itemType": 0,
+          "benefitText": {
+            "text": "-44%"
+          },
+          "extendFields": {
+            "supportTagCarousel": true,
+            "detailId": "112591675268754933"
+          },
+          "soldQuantityPercent": 0,
+          "activityType": 13,
+          "showIndex": 6,
+          "salesNum": "2",
+          "currentSkuId": 17607147029049,
+          "salesTipTextList": [
+            "已售",
+            "2件"
+          ],
+          "wareHouseType": 0,
+          "displayEndTimePercent": 51,
+          "displayEndTime": 1758005999,
+          "adultGoods": false,
+          "skuList": []
+        }
+      }
+    ],
+    "topItemsList": [],
+    "isTopSalesLoading": false,
+    "topSalesPage": 2,
+    "sectionIndexInTabList": 2,
+    "failed": false,
+    "isSticky": false,
+    "searchKey": "",
+    "recGoodsList": [],
+    "recHasMore": true,
+    "recommendWords": [],
+    "goodsNumAdv": 0,
+    "shieldAll": false,
+    "isLoading": false,
+    "optList": [
+      {
+        "@id": 1,
+        "optId": 6981,
+        "optName": "室内节日照明",
+        "imageUrl": "https://img.kwcdn.com/product/1f66680fb0/fc1c9c20-9db7-4efa-b844-c9c984f5756f_213x213.png",
+        "linkUrl": "/category.html?from_mall=1&opt_id=6981&opt_level=2&mall_id=280275145488&title=%E5%AE%A4%E5%86%85%E8%8A%82%E6%97%A5%E7%85%A7%E6%98%8E",
+        "seoLinkUrl": "/us-zh-Hans/holiday-lighting-o3-6981.html?from_mall=1&opt_id=6981&opt_level=2&mall_id=280275145488&title=%E5%AE%A4%E5%86%85%E8%8A%82%E6%97%A5%E7%85%A7%E6%98%8E",
+        "optType": 2,
+        "priority": 0,
+        "pRec": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"0\",\"scene_id\":\"14\",\"opt_id\":\"6981\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"opt_hash_id\":\"9410774\",\"opt_type\":\"2\",\"goods_source\":\"rec\",\"idx\":\"0\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415905127\"}",
+        "goodsNum": 7,
+        "pattern": 0,
+        "tabType": 0,
+        "disableDup": false,
+        "isFeatured": false,
+        "goodsNumStr": "7",
+        "tagDesc": "室内节日照明",
+        "rank": 6981,
+        "isCategory": true
+      }
+    ],
+    "trackingCache": {}
+  },
+  "searchStore": {
+    "searchText": "",
+    "showPanel": false
+  },
+  "filtersStore": {
+    "baseTrackingInfo": {},
+    "keyword": "",
+    "hasResult": true,
+    "loading": false,
+    "sortList": [
+      {
+        "name": "默认",
+        "pSearch": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"0\",\"scene_id\":\"14\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"search\",\"idx\":\"0\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415905127\"}",
+        "id": 0,
+        "sort": [
+          1
+        ],
+        "selected": 1
+      },
+      {
+        "name": "销量",
+        "pSearch": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"0\",\"scene_id\":\"14\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"search\",\"idx\":\"1\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415905127\"}",
+        "id": 1,
+        "sort": [
+          1
+        ]
+      },
+      {
+        "name": "新品上架",
+        "pSearch": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"0\",\"scene_id\":\"14\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"search\",\"idx\":\"2\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415905127\"}",
+        "id": 3,
+        "sort": [
+          1
+        ]
+      },
+      {
+        "name": "价格从低到高",
+        "pSearch": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"0\",\"scene_id\":\"14\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"search\",\"idx\":\"3\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415905127\"}",
+        "id": 2,
+        "sort": [
+          0
+        ]
+      },
+      {
+        "name": "价格从高到低",
+        "pSearch": "{\"offset\":\"0\",\"list_id\":\"n4ydlk1cwkshjwjo7zrwf\",\"g\":\"0\",\"scene_id\":\"14\",\"opt_id\":\"0\",\"ts_req\":\"0\",\"version\":\"5\",\"search_id\":\"euU7ODIahxVtc4M2hTCWnX12EJ6J4TGUfZz00VPI1PE=\",\"scene\":\"mall_rule\",\"gin_fallback\":\"0\",\"opt_type\":\"0\",\"goods_source\":\"search\",\"idx\":\"4\",\"region\":\"211\",\"no_result\":\"0\",\"cloud_env\":\"udpm1\",\"ts\":\"1757415905127\"}",
+        "id": 2,
+        "sort": [
+          1
+        ]
+      }
+    ],
+    "sortBy": "0:1",
+    "actFilterList": [],
+    "selectedActFilter": "",
+    "showFilters": false,
+    "innerFiltersData": null,
+    "activeFilterGroupInfo": null,
+    "showLineMap": {},
+    "filterTags": [],
+    "filterItems": "",
+    "cacheOptions": {
+      "enable": true,
+      "hasHistoryListener": false
+    }
+  },
+  "decorationStore": {
+    "decorationData": {},
+    "isPreview": false,
+    "makeUpTemplateId": 667812288691
+  },
+  "isDecorated": true,
+  "showFollowdPopup": false,
+  "showAddressPopup": false,
+  "mallCompanyInfo": {},
+  "mallOffersPopup": null,
+  "offerStickyType": 1,
+  "isShowStoreOffersPopup": false,
+  "localInfo": {
+    "region": "211",
+    "language": "zh-Hans",
+    "currency": "USD",
+    "timezone": "Asia/Shanghai"
+  },
+  "mallInfo": {
+    "mallId": "280275145488",
+    "mallName": "JMTONE",
+    "mallLogo": "https://img.kwcdn.com/supplier-public-tag/2079f62c29/0bea697c-faa0-43ad-abc8-471615eb3343_300x300.jpeg",
+    "buttonInfoList": [
+      {
+        "type": 1,
+        "text": "跟随",
+        "icon": "",
+        "color": "",
+        "typeCode": "Follow",
+        "jumpUrl": ""
+      },
+      {
+        "type": 2,
+        "text": "",
+        "icon": "",
+        "color": "",
+        "typeCode": "Message",
+        "jumpUrl": "chat_detail.html?host_id=280275145488&needs_login=1&login_scene=502&goods_id=601101979766680"
+      }
+    ],
+    "goodsNum": "7",
+    "goodsNumUnit": [
+      "7",
+      "商品"
+    ],
+    "goodsNumLowercaseUnit": [
+      "7",
+      "商品"
+    ],
+    "isFavorite": false,
+    "goodsSalesNum": "7,463",
+    "goodsSalesNumUnit": [
+      "7,463",
+      "已售"
+    ],
+    "goodsSalesBrief": "此数字代表该店铺的商品累计销量。",
+    "followerNum": "51",
+    "followerNumUnit": [
+      "51",
+      "粉丝"
+    ],
+    "channelType": 0,
+    "shareInfo": {
+      "shareTitle": "JMTONE on Temu",
+      "shareImg": "https://img.kwcdn.com/supplier-public-tag/2079f62c29/0bea697c-faa0-43ad-abc8-471615eb3343_300x300.jpeg",
+      "shareUrl": "https://share.temu.com/0pM8bPlYfYC",
+      "mallShareSn": "59e5eae582e437b860be0b8bee65d10a"
+    },
+    "searchShadeWords": "搜索全部7件商品",
+    "searchUrl": "/mall_search_view.html?from_mall=1&source=10076&srch_enter_source=10040202835&mall_id=280275145488&shade_words=%E6%90%9C%E7%B4%A2%E5%85%A8%E9%83%A87%E4%BB%B6%E5%95%86%E5%93%81&is_need_replace_region=0&srch_scene_type=mall",
+    "source": 1,
+    "makeUpType": 0,
+    "makeUpVersion": 13,
+    "mallInfo": {
+      "components": [
+        {
+          "componentType": 1,
+          "picSizeType": 1,
+          "materialId": 2308173513383,
+          "picUrl": "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/e5050df18d19a3d11a7b0f22398e27d7.jpg",
+          "width": 4320,
+          "height": 1080
+        },
+        {
+          "componentType": 100,
+          "text": "jvmu shop"
+        }
+      ]
+    },
+    "tagCodeList": [
+      "MallInfo",
+      "Home"
+    ],
+    "showGoodsList": false,
+    "rpcCode": "SUCCESS",
+    "serverTime": 1757415905127,
+    "extendFields": {
+      "categoryLinkScroll": false
+    },
+    "uiVersion": "short_banner",
+    "useShopBenefitStrip": false,
+    "semiManagedMallTags": {},
+    "mallTagInfoResult": {
+      "mainTagInfoList": [
+        [
+          {
+            "tagCode": 70,
+            "tagDesc": "该店铺已加入 Temu 2 年。",
+            "tagIcon": "https://aimg.kwcdn.com/upload_aimg/pho/1e590729-2d78-453e-b5cd-69a2ed553022.png.slim.png",
+            "tagText": "该店铺于 2 年前加入 Temu"
+          }
+        ]
+      ],
+      "tagModuleList": [
+        {
+          "moduleDesc": [
+            {
+              "descText": "该店铺已加入 Temu 2 年。",
+              "descTitle": "店铺入驻Temu已2年",
+              "titleIcon": "https://aimg.kwcdn.com/upload_aimg/pho/55991b45-9c98-48ae-b3e1-ebc46bc9dd81.png.slim.png"
+            }
+          ]
+        }
+      ],
+      "decoratedShop": true,
+      "tagShowStyle": 1,
+      "bottomText": "认证标签规则说明"
+    },
+    "mallEntityInfo": {
+      "displayQueryEntityIcon": true
+    },
+    "toastType": 0,
+    "headerStyle": 1,
+    "needQueryContactInfo": false,
+    "useNewSplitLine": true,
+    "goodsRankingCardStyle": {
+      "type": 2,
+      "bgImg": "https://aimg.kwcdn.com/upload_aimg/pho/07da66ce-4fba-4b88-9b4c-1cb910430817.png.slim.png"
+    },
+    "normalText": {
+      "recsFromOthersText": "其他店铺推荐",
+      "picksFromOthersText": "其他店铺精选",
+      "shopTakeBreakText": "本店铺正在小憩",
+      "noMoreItemsNote": "该店铺没有更多商品",
+      "accessibilityLogo": "店铺标志",
+      "isNeedReplaceRegion": false
+    }
+  },
+  "isFav": false,
+  "isExpire": true,
+  "mainApiErrorCode": 1000000,
+  "isRequestingFavorite": false,
+  "searchMethod": "",
+  "disableMallSeoRecommand": false,
+  "topGoodsId": [],
+  "isRobot": false,
+  "isLogin": false,
+  "recListStore": {
+    "listID": "res_list_93d1el9crtmdns9uik2j6",
+    "recPageSize": 60,
+    "pageSn": "",
+    "scene": "",
+    "goodsList": [],
+    "hasMore": true,
+    "hasInitData": false
+  },
+  "indexInitPromise": {},
+  "countryIndexMap": [
+    {
+      "text": "Germany",
+      "url": "https://www.temu.com/de"
+    },
+    {
+      "text": "France",
+      "url": "https://www.temu.com/fr"
+    },
+    {
+      "text": "Italy",
+      "url": "https://www.temu.com/it"
+    },
+    {
+      "text": "Mexico",
+      "url": "https://www.temu.com/mx"
+    },
+    {
+      "text": "Netherlands",
+      "url": "https://www.temu.com/nl"
+    },
+    {
+      "text": "Japan",
+      "url": "https://www.temu.com/jp"
+    }
+  ],
+  "goodsListId": "n4ydlk1cwkshjwjo7zrwf",
+  "mainApiFirstGoodsListId": "n4ydlk1cwkshjwjo7zrwf",
+  "showFilters": false,
+  "cartGoodsNumMap": {},
+  "goodsListNormalText": {},
+  "useNewCommentStyle": true,
+  "useNewStickStyle": true,
+  "hasRequestedAddress": false,
+  "isRenderingDeliveryTimeDistributionDialog": false,
+  "allTagsPopupLock": false,
+  "hideFixedActivityBar": false,
+  "activityBarIntersection": false,
+  "isMallOffersLoading": true,
+  "userInfoPromise": {},
+  "userRegion": {
+    "region_id1": ""
+  },
+  "installToken": "CiLm5WjACMQUXwBfKWYXAg==",
+  "dr": "udp",
+  "isIOSSystem": false,
+  "userInfo": null
+}
